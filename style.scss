@@ -1,9 +1,75 @@
-:root
+* {
+    box-sizing: border-box;
+  }
+  body {
+    background: #e4e4e4;
+    padding: 5px;
+    height: 100vh;
+    margin: 0;
+  
+    font: 500 100% system-ui, sans-serif;
+    text-transform: uppercase;
+  }
+  .page-wrap {
+    background: white;
+    height: calc(100vh - 10px);
+    box-shadow: 0 0 3px rgba(black, 0.33);
+  
+    display: grid;
+    grid-template-columns: minmax(10px, 1fr) minmax(10px, 3fr);
+    grid-template-rows: min-content min-content 1fr min-content;
+    gap: 1px;
+  
+    > * {
+      padding: 1rem;
+      text-align: center;
+    }
+  
+    @media (max-width: 600px) {
+      grid-template-columns: 100%;
+      grid-template-rows: auto;
+      > * {
+        grid-column: 1 / -1 !important;
+        grid-row: auto !important;
+      }
+    }
+  }
+  
+  .page-header {
+    grid-column: 1 / -1;
+    background: #ffcdd2;
+  }
+  
+  .page-sidebar {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    background: #e1bee7;
+  }
+  .page-nav {
+    grid-column: 2 / 3;
+    background: #bbdefb;
+  }
+  .page-main {
+    grid-column: 2 / 3;
+    background: #dcedc8;
+  }
+  .page-footer {
+    grid-column: 1 / -1;
+    background: #ffecb3;
+  }
+  
+  details p {
+    text-transform: none;
+    text-align: left;
+  }
+
+
+  :root
 {
     font-size: 62.5%;
 }
 
-body
+xbody
 {
     margin: 0;
     background-color: #ffccff;
@@ -12,7 +78,7 @@ body
     font-size: 1.6rem;
 }
 
-nav
+xnav
 {
     position: fixed;
     inset: 0 0 auto 0;
@@ -58,13 +124,13 @@ nav
     text-decoration: none;
 }
 
-main
+xmain
 {
     position: relative;
     margin-top: 4.8rem;
 }
 
-#container
+#xcontainer
 {
     width: clamp(288px, 80%, 800px);
     margin: auto;
@@ -75,7 +141,7 @@ main
     padding: 0.8rem 1.6rem;
 }
 
-footer
+xfooter
 {
     position: fixed;
     inset: auto 0 0 0;
@@ -88,7 +154,7 @@ footer
     box-sizing: border-box;
 }
 
-h1
+xh1
 {
     font-weight: bold;
     font-size: 2.4rem;
