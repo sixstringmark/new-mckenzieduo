@@ -1,0 +1,42 @@
+<h3>Contact Information</h3>
+
+<p>
+Please feel free to contact us to request additional information, check if we're available for a
+particular date, get pricing information, or to provide feedback on the website.
+</p>
+
+<p>Phone: 847-962-8847</p>
+
+<p>By <a href="mailto://info@mckenzieduo.com">email</a>: info@mckenzieduo.com</p>
+
+<p>You can also use the following form as a convenient way to send us an email request.  Any information
+you provide will remain confidential.</p>
+
+<form NAME="contact" ACTION="/cgi-pub/cgiemail" METHOD="POST">
+<div class="mailForm">
+<input type=hidden name="recipient" value="req@mckenzieduo.com">
+<input type=hidden name="redirect" value="https://spw.mckenzieduo.com/contact?res=ok">
+<input type=hidden name="required" value="email">
+<input type=hidden name="missing_fields_redirect" value="https://spw.mckenzieduo.com/contact?res=oops">
+<input type=hidden name="env_report" value="REMOTE_HOST,HTTP_USER_AGENT">
+
+<div class="row"><span class="label">Subject :</span><span class="formw">&nbsp;<select name="subject">
+<option value="McKenzie Duo Request - General question">General question</option>
+<option value="McKenzie Duo Request - Additional information">Additional information</option>
+<option value="McKenzie Duo Request - Problems listening">Problems listening to samples</option>
+<option value="McKenzie Duo Request - Please send full demo CD">Please send full demo CD</option>
+<option value="McKenzie Duo Request - Please send full-length mp3">Please send full-length mp3 file(s)</option>
+<option value="McKenzie Duo Request - Feedback on web page">Feedback on web page(s)</option></select></span></div>
+
+<div class="row"><span class="label">Your email address :</span><span class="formw">&nbsp;<input type=text name="email" size="30"></span></div>
+
+<div class="row"><span class="label">Your name (optional):</span><span class="formw">&nbsp;<input type=text name="realname"></span></div>
+
+<div class="row"><span class="label">Message :</span><span class="formw">&nbsp;<textarea rows="5" cols="30" name="stuff"></textarea></span></div>
+
+<div class="row"><span class="label">&nbsp;</span><span class="formw">&nbsp;<input type="submit" name="submit" value="Send message"></span></div>
+
+<div class="clr">&nbsp</div>
+
+</div>
+</form>
