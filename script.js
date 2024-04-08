@@ -22,6 +22,11 @@ window.onload = function () {
                 loadPage("contact");
                 break;
             }
+        case "contactsent":
+            {
+                loadPage("contactsent");
+                break;
+            }
         case "endorsements":
             {
                 loadPage("endorsements");
@@ -48,14 +53,14 @@ window.onload = function () {
     document.querySelectorAll(".menu__item").forEach((item) => {
         item.addEventListener("click", function () {
             const path = item.getAttribute("value");
-            console.log("path",path);
+            console.log("path", path);
             loadPage(path);
             if (path == "home") {
-                window.history.pushState({ick:""}, "", "/");
+                window.history.pushState({ ick: "" }, "", "/");
                 return;
             }
             console.log("pushing " + path);
-            window.history.pushState({ick:path}, "", path);
+            window.history.pushState({ ick: path }, "", path);
         });
     });
 
@@ -76,20 +81,20 @@ window.onload = function () {
     }
 
     // Handle forward/back buttons
-window.addEventListener("popstate", (event) => {
-    // If a state has been provided, we have a "simulated" page
-    // and we update the current page.
-    if (event) {
-        const state = event.state;
-        if(state.ick) {
-            loadPage(state.ick);
+    window.addEventListener("popstate", (event) => {
+        // If a state has been provided, we have a "simulated" page
+        // and we update the current page.
+        if (event) {
+            const state = event.state;
+            if (state.ick) {
+                loadPage(state.ick);
+            }
+            // Simulate the loading of the previous page
+            console.log("event.state", event);
         }
-      // Simulate the loading of the previous page
-      console.log("event.state", event);
-    }
-  });
+    });
 
 }
 
 
-  history.replaceState({ick:"home"}, "");
+history.replaceState({ ick: "home" }, "");

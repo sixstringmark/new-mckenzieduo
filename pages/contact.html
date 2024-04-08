@@ -12,10 +12,10 @@ particular date, get pricing information, or to provide feedback on the website.
 <p>You can also use the following form as a convenient way to send us an email request.  Any information
 you provide will remain confidential.</p>
 
-<form NAME="contact" ACTION="/cgi-pub/cgiemail" METHOD="POST">
+<form NAME="contact" ACTION="/cgi-bin/formmail.pl" METHOD="POST">
 <div class="mailForm">
-<input type=hidden name="recipient" value="req@mckenzieduo.com">
-<input type=hidden name="redirect" value="https://spw.mckenzieduo.com/contact?res=ok">
+<input type=hidden name="recipient" value="info@mckenzieduo.com">
+<input type=hidden name="redirect" value="https://spw.mckenzieduo.com/contactsent">
 <input type=hidden name="required" value="email">
 <input type=hidden name="missing_fields_redirect" value="https://spw.mckenzieduo.com/contact?res=oops">
 <input type=hidden name="env_report" value="REMOTE_HOST,HTTP_USER_AGENT">
