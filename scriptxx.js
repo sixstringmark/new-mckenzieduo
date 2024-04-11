@@ -52,7 +52,7 @@ function trackTimeChanged() {
     var duration = audio.duration;
     var p_duration = secondsToHHMMSS(duration);
     var p_currentTime = secondsToHHMMSS(currentTime);
-    player_config.progress_label.innerHTML = p_currentTime + " of " + p_duration;
+    player_config.progress_label.innerHTML = p_currentTime + " / " + p_duration;
     //console.log(player_config.progress_label.innerHTML);
     //document.getElementById("progress_label").innerHTML = "whatever";
 
