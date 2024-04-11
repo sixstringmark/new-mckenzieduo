@@ -5,10 +5,18 @@ The following are links to mp3 files containing selected McKenzie Duo recordings
 studio, home and live recordings.  If your browser is
 capable of playing mp3 files, then you can click on one of the icons to play or download:
 <div style="margin: 1em 0;">
-<div><img src="../images/play-icon1.gif"> Play - high-speed connection</div>
-<div><img src="../images/play-icon2.gif"> Play - dial-up connection</div>
+<div><img onclick="playMe('https://www.mckenzieduo.com/sounds/70s-03-part-3.mp3')"  src="../images/play-icon1.gif"> Play - high-speed connection</div>
+<div><img onclick="playMe('https://mckenzieduo.com/sounds/DannyBoy-x.mp3')"src="../images/play-icon2.gif"> Play - dial-up connection</div>
 <div><img src="../images/play-icon4.gif"> Download or play mp3 file</div>
 </div>
+<div id="pp_label">1:20 / 4:25</div>
+<div class="pp_container">
+    <progress value="0" max="100" id="pp"></progress>
+    <progress value="0" max="100" id="pp2"></progress>
+</div>
+
+
+
 These selections are excerpts that are typically around 30 seconds long and less that 500k
 in file size.
 We can provide full-length versions via email or audio CD, if you are interested.</p><p>
@@ -134,8 +142,11 @@ Sicilienne (von Paradies)</td>
 <td class="demoDesc">This lovely and little-known piece is the work of a blind woman musician from the time of Beethoven.</td>
 </tr>
 
+
+
 <tr valign="top">
 <td class="demoIcon" nowrap="true">
+    <button onclick="playMe()">Click me</button>
 <a href="https://mckenzieduo.com/sounds/DannyBoy-x.m3u" title="Play - broadband"><img src="../images/play-icon1.gif"></a>
 <a href="https://mckenzieduo.com/sounds/DannyBoy-y.m3u" title="Play - dial-up"><img src="../images/play-icon2.gif"></a>
 <a href="https://mckenzieduo.com/sounds/DannyBoy-x.mp3" title="Download/play mp3"><img src="../images/play-icon4.gif"></a>
@@ -201,3 +212,9 @@ Pavane Pour Une Infante Defunte</td>
 </tr>
 
 </table>
+
+<audio id="audio" preload="none" tabindex="0">
+    <source src="https://mckenzieduo.com/sounds/demo-full.mp3" data-track-number="1" />
+    <source src="https://mckenzieduo.com/sounds/Rondo.mp3" data-track-number="2" />
+    Your browser does not support HTML5 audio.
+</audio>

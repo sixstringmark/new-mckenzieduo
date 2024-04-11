@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+        window.onscroll = function (e) {
+            var pageTopToDivBottom = $("#tracked").offset().top + $("#tracked")[0].scrollHeight;
+            var scrolledPlusViewable = $(window).scrollTop() + $(window).height();
+            if ($(window).scrollTop() > pageTopToDivBottom) {
+                console.log("Element hidden (above viewable area)");
+                appendToLog("a", pageTopToDivBottom, scrolledPlusViewable, $(window).scrollTop(), "");
+                $("div[data-wzb='AddToCart']").css('display', 'block');
+                $("div[data-wzb='AddToCart']").css('opacity', 1.0);
+            } else if (scrolledPlusViewable < $("#tracked").offset().top) {
+                console.log("Element hidden (below viewable area)");
+                appendToLog("b", pageTopToDivBottom, scrolledPlusViewable, $(window).scrollTop(), $("#tracked").offset().top);
+                $("div[data-wzb='AddToCart']").css('display', 'none');
+                $("div[data-wzb='AddToCart']").css('opacity', 0.0);
+            } else {
+                console.log("Element visible! (within viewable area)");
+                appendToLog("c", pageTopToDivBottom, scrolledPlusViewable, $(window).scrollTop(), $("#tracked").offset().top);
+                $("div[data-wzb='AddToCart']").css('display', 'none');
+                $("div[data-wzb='AddToCart']").css('opacity', 0.0);
+            }
+        }
+        function appendToLog(a,b,c,d,e) {
+            const t = document.getElementById("log");
+            //console.log(t, t.value);
+            t.value = t.value + a + "/" + b + "/" + c + "/" + d + "/" + e + "\n";
+        }
+
+
+    </script>
+    <style>
+        .head,
+        .foot {
+            background: #ffccff;
+            padding: .75em;
+            width: 100%;
+        }
+
+        .stick {
+            background: #ccffcc;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 98%;
+            margin: 0 1%;
+            border-radius: 50px;
+            height: 62px;
+            line-height: 62px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .content {
+            background: #cccccc;
+            padding: 2em;
+            max-width: 300px;
+        }
+
+        #tracked {
+            background: #ccccff;
+            border: 1px solid #ccccff;
+            padding: 12px;
+            border-radius: 8px;
+        }
+
+        #log {
+            width: 90%;
+            background-color: #d7deb5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <h2>Here top</h2>
+    </div>
+    <div class="content">
+        <textarea id="log" rows="4"></textarea>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos laborum cumque incidunt, enim ipsa
+            dicta? Porro illo doloribus, consectetur eum exercitationem sit ipsam, est nesciunt maxime, eius animi
+            dolor? Harum.</p>
+        <div id="tracked">
+            <span>Here tracked</span>
+        </div>
+        <p>Commodi culpa deserunt dolor sed, ipsam tempore ullam architecto fuga voluptas, quis veniam. Vitae veniam,
+            odit adipisci, quas similique debitis excepturi quisquam minima facere temporibus, porro optio perferendis
+            iusto fuga.</p>
+        <p>Illo numquam, sapiente neque repellendus facere amet doloribus asperiores quia eum? Sunt vero amet neque vel?
+            Tempora, nulla voluptatum amet autem culpa magnam debitis! Dolores esse quam amet nobis ut.</p>
+        <p>Sunt excepturi in nostrum, fugiat veritatis ab sit sequi nemo aperiam deserunt temporibus, dolorem ex
+            adipisci autem. Quasi, iure fugiat! Nulla amet doloribus velit nam tempora, soluta consequatur doloremque
+            omnis?</p>
+        <p>Officia ea repellat ad, sapiente eligendi modi magni quos temporibus totam culpa corporis, dignissimos
+            quibusdam mollitia dolore eaque suscipit soluta beatae ipsam! Aperiam doloremque vero soluta pariatur
+            possimus. Cupiditate, fuga.</p>
+        <p>Beatae deserunt veritatis magni quis quae enim ad est dignissimos iste, quidem, dolores temporibus asperiores
+            natus inventore, nobis eius facere adipisci doloremque eligendi autem magnam excepturi? Inventore, iusto
+            soluta. Maiores.</p>
+        <p>Enim facilis aspernatur, maiores unde at inventore temporibus minima possimus eveniet? Cum alias, asperiores
+            quibusdam doloribus, vel ullam qui in dicta recusandae eaque atque dolor perspiciatis tenetur, fugit vero
+            reprehenderit.</p>
+        <p>Reiciendis, deleniti eius nostrum fugit commodi quasi esse molestias non voluptates, corrupti excepturi
+            voluptatibus, consequatur ipsa animi placeat quia corporis ut itaque quos pariatur inventore. Quasi incidunt
+            sapiente quisquam soluta?</p>
+        <p>Laboriosam eos atque possimus assumenda quia voluptatem saepe optio, eveniet laborum. Sit esse doloremque
+            laboriosam? Ullam inventore ut facilis accusamus, ipsum, autem labore incidunt consequatur eos dolorem, sit
+            aperiam odit.</p>
+        <p>Consequuntur pariatur illum doloremque, necessitatibus praesentium quis cumque officiis non
+            commodi
+            reprehenderit quaerat velit saepe impedit vitae dolores, veritatis reiciendis ducimus nobis totam, itaque
+            porro temporibus excepturi error iste! Sunt.</p>
+        <p>Commodi culpa deserunt dolor sed, ipsam tempore ullam architecto fuga voluptas, quis veniam. Vitae veniam,
+            odit adipisci, quas similique debitis excepturi quisquam minima facere temporibus, porro optio perferendis
+            iusto fuga.</p>
+        <p>Illo numquam, sapiente neque repellendus facere amet doloribus asperiores quia eum? Sunt vero amet neque vel?
+            Tempora, nulla voluptatum amet autem culpa magnam debitis! Dolores esse quam amet nobis ut.</p>
+        <p>Sunt excepturi in nostrum, fugiat veritatis ab sit sequi nemo aperiam deserunt temporibus, dolorem ex
+            adipisci autem. Quasi, iure fugiat! Nulla amet doloribus velit nam tempora, soluta consequatur doloremque
+            omnis?</p>
+        <p>Officia ea repellat ad, sapiente eligendi modi magni quos temporibus totam culpa corporis, dignissimos
+            quibusdam mollitia dolore eaque suscipit soluta beatae ipsam! Aperiam doloremque vero soluta pariatur
+            possimus. Cupiditate, fuga.</p>
+
+    </div>
+
+    <div class="foot">
+        <h2>Here bottom</h2>
+    </div>
+
+    <div class="stick" data-wzb='AddToCart'>
+        <span>Stickler</span>
+    </div>
+
+
+</body>
+
+</html>
