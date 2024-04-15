@@ -6,11 +6,11 @@
   --xbg5: #dcedc8;
   --xbg6: #ffecb3;
   /* CSS HEX */
-  --cool-gray: #8693ab;
-  --columbia-blue: #bdd4e7;
   --raisin-black: #212227;
   --dim-gray: #637074;
+  --cool-gray: #8693ab;
   --powder-blue: #aab9cf;
+  --columbia-blue: #bdd4e7;
   --cool-white: #f1f2f7;
 
   --bg1: var(--raisin-black);
@@ -29,6 +29,14 @@
 
   --font1: Open Sans, Arial, sans-serif;
 
+  --play-button-svg-cool-white: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg width='800px' height='800px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='10' stroke='%23f1f2f7' stroke-width='1.5'/%3E%3Cpath d='M15.4137 10.941C16.1954 11.4026 16.1954 12.5974 15.4137 13.059L10.6935 15.8458C9.93371 16.2944 9 15.7105 9 14.7868L9 9.21316C9 8.28947 9.93371 7.70561 10.6935 8.15419L15.4137 10.941Z' stroke='%23f1f2f7' stroke-width='1.5'/%3E%3C/svg%3E");
+  --pause-button-svg-cool-white: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg width='800px' height='800px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='10' stroke='%23f1f2f7' stroke-width='1.5'/%3E%3Cpath id='Vector' d='M14 9V15M10 9V15M12' stroke='%23f1f2f7' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+
+  --play-button-svg-raisin-black: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg width='800px' height='800px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='10' stroke='%23212227' stroke-width='1.5'/%3E%3Cpath d='M15.4137 10.941C16.1954 11.4026 16.1954 12.5974 15.4137 13.059L10.6935 15.8458C9.93371 16.2944 9 15.7105 9 14.7868L9 9.21316C9 8.28947 9.93371 7.70561 10.6935 8.15419L15.4137 10.941Z' stroke='%23212227' stroke-width='1.5'/%3E%3C/svg%3E");
+  --pause-button-svg-raisin-black: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg width='800px' height='800px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='10' stroke='%23212227' stroke-width='1.5'/%3E%3Cpath id='Vector' d='M14 9V15M10 9V15M12' stroke='%23212227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+
+  --pause-filled-dark: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg width='800px' height='800px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='10' stroke='%231C274C' fill='white' stroke-width='1.5'/%3E%3Cpath id='Vector' d='M14 9V15M10 9V15M12' stroke='%231C274C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  --play-filled-dark: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg width='800px' height='800px' viewBox='0 0 24 24' fill='%23ccccff' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='10' stroke='%231C274C' stroke-width='1.5'/%3E%3Cpath fill='%231C274C' d='M15.4137 10.941C16.1954 11.4026 16.1954 12.5974 15.4137 13.059L10.6935 15.8458C9.93371 16.2944 9 15.7105 9 14.7868L9 9.21316C9 8.28947 9.93371 7.70561 10.6935 8.15419L15.4137 10.941Z' stroke='%231C274C' stroke-width='1.5'/%3E%3C/svg%3E");
 }
 
 * {
@@ -43,7 +51,7 @@ body {
   height: 100vh;
   margin: 0;
   font-family: var(--font1);
-  font-size: 75%;
+  font-size: 100%;
 
 }
 
@@ -143,25 +151,30 @@ details p {
 }
 
 progress[value] {
-  -webkit-appearance:none;
-  -moz-appearance:none;        
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 }
+
 progress[value] {
 
-width: 50%;
-height: 12px;
-color: red;
-background: #ccf;
-display: block;
+  width: 50%;
+  height: 12px;
+  color: red;
+  background: #ccf;
+  display: block;
 }
 
 
 progress[value] {
-  --color: #8888dd; /* the progress color */
-  --background: transparent; /* the background color */
-  --color2: #aaaaaa; /* the progress color */
-  --background2: #cccccc; /* the background color */
+  --color: #8888dd;
+  /* the progress color */
+  --background: transparent;
+  /* the background color */
+  --color2: #aaaaaa;
+  /* the progress color */
+  --background2: #cccccc;
+  /* the background color */
 
 
   -webkit-appearance: none;
@@ -174,14 +187,17 @@ progress[value] {
   border-radius: 10em;
   background: var(--background);
 }
+
 progress[value]::-webkit-progress-bar {
   border-radius: 10em;
   background: var(--background);
 }
+
 progress[value]::-webkit-progress-value {
   border-radius: 10em;
   background: var(--color);
 }
+
 progress[value]::-moz-progress-bar {
   border-radius: 10em;
   background: var(--color);
@@ -200,14 +216,17 @@ progress[value]#pp2 {
   border-radius: 10em;
   background: var(--background);
 }
+
 progress[value]#pp2::-webkit-progress-bar {
   border-radius: 10em;
   background: var(--background2);
 }
+
 progress[value]#pp2::-webkit-progress-value {
   border-radius: 10em;
   background: var(--color2);
 }
+
 progress[value]#pp2::-moz-progress-bar {
   border-radius: 10em;
   background: var(--color2);
@@ -224,19 +243,162 @@ progress[value]#pp2::-moz-progress-bar {
   margin: .5em 10px;
   max-width: 300px;
 }
+
 .pp_container {
   position: relative;
 }
+
 #pp {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 50;
 }
+
 #pp2 {
   z-index: 100;
 }
 
 
+.play_button {
+  border: 0;
+  background: white;
+  box-sizing: border-box;
+  width: 0;
+  height: 74px;
+
+  border-color: transparent transparent transparent #202020;
+  transition: 100ms all ease;
+  cursor: pointer;
+
+  border-style: solid;
+  border-width: 37px 0 37px 60px;
+
+}
+
+.play_button.paused {
+  border-style: double;
+  border-width: 0px 0 0px 60px;
+}
+
+.play_button:hover {
+  border-color: transparent transparent transparent #404040;
+}
 
 
+.gv_icon_play {
+  background-image: var(--play-button-svg-cool-white);
+  background-size: cover;
+  height: 1.2em;
+  width: 1.2em;
+  display: inline-block;
+}
+
+.gv_icon_play.gv_icon_pause {
+  background-image: var(--pause-button-svg-cool-white);
+  background-size: cover;
+  height: 1.2em;
+  width: 1.2em;
+  display: inline-block;
+}
+
+.gv_icon_play_dark {
+  background-image: var(--play-button-svg-raisin-black);
+  background-size: cover;
+  height: 1.2em;
+  width: 1.2em;
+  display: inline-block;
+}
+
+.gv_icon_play_dark.gv_icon_pause {
+  background-image: var(--pause-button-svg-raisin-black);
+  background-size: cover;
+  height: 1.2em;
+  width: 1.2em;
+  display: inline-block;
+}
+
+.gv_icon_play_filled {
+  background-image: var(--play-filled-dark);
+  background-size: cover;
+  height: 1.2em;
+  width: 1.2em;
+  display: inline-block;
+}
+
+.gv_icon_play_filled.gv_icon_pause {
+  background-image: var(--pause-filled-dark);
+  background-size: cover;
+  height: 1.2em;
+  width: 1.2em;
+  display: inline-block;
+}
+
+.gv_iconv {
+  height: 1.2em;
+  width: 1.2em;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+}
+
+div.ii > img{
+  width: 60px;
+  height: 60px;
+}
+
+#play_label { grid-area: label }
+
+#pp_label { 
+  grid-area: numbers; 
+}
+#play_master { 
+  grid-area: button; 
+}
+#progress_top { 
+  grid-area: progress; 
+}
+
+#player_box {
+  display: grid;
+  grid-template-areas:
+    'button label label'
+    'button progress numbers';
+  grid-template-columns: 32px 200px;
+  gap: 8px;
+  background-color: var(--bg1);
+  width: 100%;
+  padding: 0;
+  margin: 1em 0;
+  align-items: center;
+}
+
+#player_box > div {
+  text-align: left;
+}
+#player_box progress[value]#pp,
+#player_box progress[value]#pp2 {
+  width: 100%;
+  margin: 0;
+}
+#player_box #pp_label {
+  margin: 0;
+  width: auto;
+}
+
+#player_box #play_master {
+  width: 32px;
+  height: 32px;
+}
+
+.listening_room {
+  position: relative;
+}
+
+.listening_list {
+  border-spacing: 0;
+}
+
+tr.playlist_playing {
+  background-color: var(--bg2);
+}

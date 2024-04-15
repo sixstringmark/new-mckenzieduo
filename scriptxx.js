@@ -3,8 +3,11 @@ const player_config = {};
 function initPlayer() {
     console.log('initPlayer');
     player_config.audio = document.getElementById("audio");
+    player_config.play_master = document.getElementById("play_master");
+    player_config.play_label = document.getElementById("play_label");
     player_config.progress = document.getElementById("pp");
     player_config.buffer = document.getElementById("pp2");
+    player_config.now_playing = null;
     player_config.progress_label = document.getElementById("pp_label");
     player_config.progress.onclick = function (event) { player_seek(event); };
     player_config.audio.addEventListener("timeupdate", trackTimeChanged, false);
@@ -40,13 +43,112 @@ function playMe(songURL) {
         console.log('playMe init');
         initPlayer();
     }
+    console.log(songURL);
     player_config.audio.setAttribute("src", songURL);
     player_config.audio.load();
     player_config.progress.value = 0;
     player_config.buffer.value = 0;
     player_config.audio.play();
 
+
 }
+
+function togglePlay(song) {
+
+    if (!player_config.audio) {
+        console.log('togglePlay init');
+        initPlayer();
+    }
+    if (player_config.now_playing) {
+        if (player_config.now_playing === song) {
+            // if playing, pause it, otherwise start it
+            if (player_config.audio.paused) {
+                player_config.play_master.classList.add('gv_icon_pause');
+                song.classList.add('gv_icon_pause');
+                player_config.audio.play();
+            } else {
+                player_config.play_master.classList.remove('gv_icon_pause');
+                song.classList.remove('gv_icon_pause');
+                player_config.audio.pause();
+            }
+        } else {
+            // different song
+
+            // toggle current playing song icon to "play" from "pause"
+            player_config.now_playing.classList.remove("gv_icon_pause");
+
+            // establish new song as now playing and toggle its icon
+            song.classList.add("gv_icon_pause");
+            player_config.audio.setAttribute("src", song.getAttribute("data-song"));
+            player_config.audio.load();
+            player_config.progress.value = 0;
+            player_config.buffer.value = 0;
+            player_config.audio.play();
+            player_config.play_master.classList.add('gv_icon_pause');
+            console.log('grrr');
+            const lbl = song.parentNode.parentNode.getElementsByClassName("demoTitle");
+            player_config.play_label.innerHTML = lbl[0].textContent;
+            const to_move = document.getElementById("progress_top");
+            console.log(to_move);
+
+            // set background color
+            song.parentNode.parentNode.classList.add("playlist_playing");
+            player_config.now_playing.parentNode.parentNode.classList.remove("playlist_playing");
+            player_config.now_playing = song;
+            //const move_to = song.parentNode.parentNode.getElementsByClassName("demoTitle")[0].appendChild(to_move);
+
+        }
+    } else {
+        // no song played yet - crank it up
+        song.parentNode.parentNode.classList.add("playlist_playing");
+        player_config.now_playing = song;
+        song.classList.add("gv_icon_pause");
+        player_config.audio.setAttribute("src", song.getAttribute("data-song"));
+        player_config.audio.load();
+        player_config.progress.value = 0;
+        player_config.buffer.value = 0;
+        player_config.audio.play();
+        player_config.play_master.classList.add('gv_icon_pause');
+        console.log('brrr');
+        console.log(song.parentNode.parentNode);
+        const lbl = song.parentNode.parentNode.getElementsByClassName("demoTitle");
+        player_config.play_label.innerHTML = lbl[0].textContent;
+        const to_move = document.getElementById("progress_top");
+        console.log(to_move);
+        //const move_to = song.parentNode.parentNode.getElementsByClassName("demoTitle")[0].appendChild(to_move);
+    }
+
+
+}
+
+function togglePlaying(control) {
+    if (!player_config.audio) {
+        console.log('togglePlay init');
+        initPlayer();
+    }
+    let icon = player_config.play_master;
+    if (!icon) {
+        icon = control;
+    }
+    if (player_config.now_playing) {
+        // if playing, pause it, otherwise start it
+        if (player_config.audio.paused) {
+            player_config.play_master.classList.add('gv_icon_pause');
+            icon.classList.add('gv_icon_pause');
+            player_config.now_playing.classList.add('gv_icon_pause');
+            player_config.audio.play();
+        } else {
+            player_config.play_master.classList.remove('gv_icon_pause');
+            icon.classList.remove('gv_icon_pause');
+            player_config.now_playing.classList.remove('gv_icon_pause');
+            player_config.audio.pause();
+        }
+
+    }
+
+}
+
+
 function trackTimeChanged() {
     var currentTime = audio.currentTime;
     var duration = audio.duration;
@@ -63,7 +165,11 @@ function trackTimeChanged() {
     bufferProgress();
 }
 function trackHasEnded(e) {
-    console.log(e);
+    if (player_config.now_playing) {
+        // if playing, pause it, otherwise start it
+        player_config.play_master.classList.remove('gv_icon_pause');
+        player_config.now_playing.classList.remove('gv_icon_pause');
+    }
     player_config.progress.value = 0;
 }
 function setProgress(p) {

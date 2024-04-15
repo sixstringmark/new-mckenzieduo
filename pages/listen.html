@@ -1,220 +1,200 @@
+<div class="listening_room">
 <h3>Listening Room</h3>
 <p>
-<img src="../images/statues2.jpg" class="rightImg" style="border: 0px;">
-The following are links to mp3 files containing selected McKenzie Duo recordings.  These were created from
-studio, home and live recordings.  If your browser is
-capable of playing mp3 files, then you can click on one of the icons to play or download:
-<div style="margin: 1em 0;">
-<div><img onclick="playMe('https://www.mckenzieduo.com/sounds/70s-03-part-3.mp3')"  src="../images/play-icon1.gif"> Play - high-speed connection</div>
-<div><img onclick="playMe('https://mckenzieduo.com/sounds/DannyBoy-x.mp3')"src="../images/play-icon2.gif"> Play - dial-up connection</div>
-<div><img src="../images/play-icon4.gif"> Download or play mp3 file</div>
-</div>
-<div id="pp_label">1:20 / 4:25</div>
-<div class="pp_container">
-    <progress value="0" max="100" id="pp"></progress>
-    <progress value="0" max="100" id="pp2"></progress>
-</div>
-
+    <img src="../images/statues2.jpg" class="rightImg" style="border: 0px;">
+    The following are links to mp3 files containing selected McKenzie Duo recordings. These were created from
+    studio, home and live recordings. 
 
 
 These selections are excerpts that are typically around 30 seconds long and less that 500k
 in file size.
-We can provide full-length versions via email or audio CD, if you are interested.</p><p>
-Please <a href="duoContact2.htm">contact us</a> if you have any problems playing these
-selections and we'll be happy to send you samples in a format that works for you.
+</p>
+<p>
+    Please <a href="duoContact2.htm">contact us</a> if you have any problems playing these
+    selections and we'll be happy to send you samples in a format that works for you.
 </p>
 <p class="clr">&nbsp;</p>
+<div id="player_box">
+    <div id="pp_label"></div>
+    <div id="play_label">(make a selection)</div>
+    <div class="gv_icon_play" id="play_master" onclick="togglePlaying()"></div> 
+    <div class="pp_container" id="progress_top">
+        <progress value="0" max="100" id="pp"></progress>
+        <progress value="0" max="100" id="pp2"></progress>
+    </div>
+    <audio id="audio" preload="none" tabindex="0">
+        Your browser does not support HTML5 audio.
+    </audio>
+    
+</div>
 
-<table cellpadding="4" width="100%">
+<table class="listening_list" cellpadding="4" width="100%">
 
-<tr valign="top">
-<td class="demoIcon" nowrap="true">
-<a href="https://mckenzieduo.com/sounds/demo-full.m3u" title="Play - broadband"><img src="../images/play-icon1.gif"></a>
-<a href="https://mckenzieduo.com/sounds/demo-full-y.m3u" title="Play - dial-up"><img src="../images/play-icon2.gif"></a>
-<a href="https://mckenzieduo.com/sounds/demo-full.mp3" title="Download/play mp3"><img src="../images/play-icon4.gif"></a>
-</td>
-<td class="demoTitle">
-Demo Medley</td>
-<td class="demoDesc">A brief mix of each of the following seven songs, in the order listed below, in a single mp3.</td>
-</tr>
+    <tr valign="top">
+        <td class="demoIcon" nowrap="true">
+            <div class="gv_icon_play" data-song="https://mckenzieduo.com/sounds/demo-full.mp3"
+                onclick="togglePlay(this)"></div>
+        </td>
+        </td>
+        <td class="demoTitle">
+            Demo Medley
+        </td>
+        <td class="demoDesc">
+            A brief mix of each of the following seven songs, in the order listed below, in a single mp3.</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td></td>
+    </tr>
 
-<tr><td>&nbsp;</td><td></td></tr>
+    <tr valign="top">
+        <td class="demoIcon" nowrap="true">
+            <div class="gv_icon_play" data-song="https://mckenzieduo.com/sounds/Rondo-x.mp3" onclick="togglePlay(this)"></div></td>
+        </td>
+        <td class="demoTitle">
+            Rondo (C.P.E.Bach)</td>
+        <td class="demoDesc">A spritely tune from a Sonata by one of J.S.Bach's talented sons.</td>
+    </tr>
 
-<tr valign="top">
-<td class="demoIcon" nowrap="true">
-<a href="https://mckenzieduo.com/sounds/Rondo-x.m3u" title="Play - broadband"><img src="../images/play-icon1.gif"></a>
-<a href="https://mckenzieduo.com/sounds/Rondo-y.m3u" title="Play - dial-up"><img src="../images/play-icon2.gif"></a>
-<a href="https://mckenzieduo.com/sounds/Rondo-x.mp3" title="Download/play mp3"><img src="../images/play-icon4.gif"></a>
-</td>
-<td class="demoTitle">
-Rondo (C.P.E.Bach)</td>
-<td class="demoDesc">A spritely tune from a Sonata by one of J.S.Bach's talented sons.</td>
-</tr>
+    <tr valign="top">
+        <td class="demoIcon" nowrap="true">
+            <div class="gv_icon_play" data-song="https://mckenzieduo.com/sounds/CanYouFeel-x.mp3" onclick="togglePlay(this)"></div></td>
+        </td>
+        <td class="demoTitle">
+            Can You Feel the Love Tonight?</td>
+        <td class="demoDesc">Classic song from "The Lion King".</td>
+    </tr>
 
-<tr valign="top">
-<td class="demoIcon" nowrap="true">
-<a href="https://mckenzieduo.com/sounds/CanYouFeel-x.m3u" title="Play - broadband"><img src="../images/play-icon1.gif"></a>
-<a href="https://mckenzieduo.com/sounds/CanYouFeel-y.m3u" title="Play - dial-up"><img src="../images/play-icon2.gif"></a>
-<a href="https://mckenzieduo.com/sounds/CanYouFeel-x.mp3" title="Download/play mp3"><img src="../images/play-icon4.gif"></a>
-</td>
-<td class="demoTitle">
-Can You Feel the Love Tonight? (Elton John)</td>
-<td class="demoDesc">Classic song from "The Lion King".</td>
-</tr>
+    <tr valign="top">
+        <td class="demoIcon" nowrap="true">
+            <div class="gv_icon_play" data-song="https://mckenzieduo.com/sounds/HereThere-x.mp3" onclick="togglePlay(this)"></div></td>
+        </td>
+        <td class="demoTitle">
+            Here, There and Everywhere (Beatles)</td>
+        <td class="demoDesc">Even without words, one of Lennon and McCartney's most beautiful songs.</td>
+    </tr>
 
-<tr valign="top">
-<td class="demoIcon" nowrap="true">
-<a href="https://mckenzieduo.com/sounds/HereThere-x.m3u" title="Play - broadband"><img src="../images/play-icon1.gif"></a>
-<a href="https://mckenzieduo.com/sounds/HereThere-y.m3u" title="Play - dial-up"><img src="../images/play-icon2.gif"></a>
-<a href="https://mckenzieduo.com/sounds/HereThere-x.mp3" title="Download/play mp3"><img src="../images/play-icon4.gif"></a>
-</td>
-<td class="demoTitle">
-Here, There and Everywhere (Beatles)</td>
-<td class="demoDesc">Even without words, one of Lennon and McCartney's most beautiful songs.</td>
-</tr>
+    <tr valign="top">
+        <td class="demoIcon" nowrap="true">
+            <div class="gv_icon_play" data-song="https://mckenzieduo.com/sounds/GiveMeYourHand-x.mp3" onclick="togglePlay(this)"></div></td>
+        </td>
+        <td class="demoTitle">
+            Give Me Your Hand (O'Callahan)</td>
+        <td class="demoDesc">A traditional Irish harp tune, written to woo a lover.</td>
+    </tr>
 
-<tr valign="top">
-<td class="demoIcon" nowrap="true">
-<a href="https://mckenzieduo.com/sounds/GiveMeYourHand-x.m3u" title="Play - broadband"><img src="../images/play-icon1.gif"></a>
-<a href="https://mckenzieduo.com/sounds/GiveMeYourHand-y.m3u" title="Play - dial-up"><img src="../images/play-icon2.gif"></a>
-<a href="https://mckenzieduo.com/sounds/GiveMeYourHand-x.mp3" title="Download/play mp3"><img src="../images/play-icon4.gif"></a>
-</td>
-<td class="demoTitle">
-Give Me Your Hand (O'Callahan)</td>
-<td class="demoDesc">A traditional Irish harp tune, written to woo a lover.</td>
-</tr>
+    <tr valign="top">
+        <td class="demoIcon" nowrap="true">
+            <div class="gv_icon_play" data-song="https://mckenzieduo.com/sounds/Siciliano-x.mp3" onclick="togglePlay(this)"></div></td>
+        </td>
+        <td class="demoTitle">
+            Siciliano (Bach)</td>
+        <td class="demoDesc">One of Bach's prettiest works.</td>
+    </tr>
 
-<tr valign="top">
-<td class="demoIcon" nowrap="true">
-<a href="https://mckenzieduo.com/sounds/Siciliano-x.m3u" title="Play - broadband"><img src="../images/play-icon1.gif"></a>
-<a href="https://mckenzieduo.com/sounds/Siciliano-y.m3u" title="Play - dial-up"><img src="../images/play-icon2.gif"></a>
-<a href="https://mckenzieduo.com/sounds/Siciliano-x.mp3" title="Download/play mp3"><img src="../images/play-icon4.gif"></a>
-</td>
-<td class="demoTitle">
-Siciliano (Bach)</td>
-<td class="demoDesc">One of Bach's prettiest works.</td>
-</tr>
+    <tr valign="top">
+        <td class="demoIcon" nowrap="true">
+            <div class="gv_icon_play" data-song="https://mckenzieduo.com/sounds/LoversWaltz-x.mp3" onclick="togglePlay(this)"></div></td>
+        </td>
+        <td class="demoTitle">
+            Lovers Waltz (Jay Ungar)</td>
+        <td class="demoDesc">A lovely melody from the composer of "Ashokan Farewell". We learned this
+            one as a request for a wedding several years ago, and we've been playing it ever since.</td>
+    </tr>
 
-<tr valign="top">
-<td class="demoIcon" nowrap="true">
-<a href="https://mckenzieduo.com/sounds/LoversWaltz-x.m3u" title="Play - broadband"><img src="../images/play-icon1.gif"></a>
-<a href="https://mckenzieduo.com/sounds/LoversWaltz-y.m3u" title="Play - dial-up"><img src="../images/play-icon2.gif"></a>
-<a href="https://mckenzieduo.com/sounds/LoversWaltz-x.mp3" title="Download/play mp3"><img src="../images/play-icon4.gif"></a>
-</td>
-<td class="demoTitle">
-Lovers Waltz (Jay Ungar)</td>
-<td class="demoDesc">A lovely melody from the composer of "Ashokan Farewell".  We learned this
-one as a request for a wedding several years ago, and we've been playing it ever since.</td>
-</tr>
+    <tr valign="top">
+        <td class="demoIcon" nowrap="true">
+            <div class="gv_icon_play" data-song="https://mckenzieduo.com/sounds/Rondeau-x.mp3" onclick="togglePlay(this)"></div></td>
+        </td>
+        <td class="demoTitle">
+            Rondeau (Mouret)</td>
+        <td class="demoDesc">The stately, familiar "Masterpiece Theater" theme makes an excellent processional.</td>
+    </tr>
 
-<tr valign="top">
-<td class="demoIcon" nowrap="true">
-<a href="https://mckenzieduo.com/sounds/Rondeau-x.m3u" title="Play - broadband"><img src="../images/play-icon1.gif"></a>
-<a href="https://mckenzieduo.com/sounds/Rondeau-y.m3u" title="Play - dial-up"><img src="../images/play-icon2.gif"></a>
-<a href="https://mckenzieduo.com/sounds/Rondeau-x.mp3" title="Download/play mp3"><img src="../images/play-icon4.gif"></a>
-</td>
-<td class="demoTitle">
-Rondeau (Mouret)</td>
-<td class="demoDesc">The stately, familiar "Masterpiece Theater" theme makes an excellent processional.</td>
-</tr>
+    <tr>
+        <td colspan="3">
+            <hr noshade size=1>
+        </td>
+    </tr>
 
-<tr><td colspan="3"><hr noshade size=1></td></tr>
+    <tr valign="top">
+        <td class="demoIcon" nowrap="true">
+            <div class="gv_icon_play" data-song="https://mckenzieduo.com/sounds/WindBeneathMyWings-x.mp3" onclick="togglePlay(this)"></div></td>
+        </td>
+        <td class="demoTitle">
+            The Wind Beneath My Wings</td>
+        <td class="demoDesc">Bette Midler's popular hit has been recorded many times, and here's our version.</td>
+    </tr>
 
-<tr valign="top">
-<td class="demoIcon" nowrap="true">
-<a href="https://mckenzieduo.com/sounds/WindBeneathMyWings-x.m3u" title="Play - broadband"><img src="../images/play-icon1.gif"></a>
-<a href="https://mckenzieduo.com/sounds/WindBeneathMyWings-y.m3u" title="Play - dial-up"><img src="../images/play-icon2.gif"></a>
-<a href="https://mckenzieduo.com/sounds/WindBeneathMyWings-x.mp3" title="Download/play mp3"><img src="../images/play-icon4.gif"></a>
-</td>
-<td class="demoTitle">
-The Wind Beneath My Wings</td>
-<td class="demoDesc">Bette Midler's popular hit has been recorded many times, and here's our version.</td>
-</tr>
-
-<tr valign="top">
-<td class="demoIcon" nowrap="true">
-<a href="https://mckenzieduo.com/sounds/Sicilienne-x.m3u" title="Play - broadband"><img src="../images/play-icon1.gif"></a>
-<a href="https://mckenzieduo.com/sounds/Sicilienne-y.m3u" title="Play - dial-up"><img src="../images/play-icon2.gif"></a>
-<a href="https://mckenzieduo.com/sounds/Sicilienne-x.mp3" title="Download/play mp3"><img src="../images/play-icon4.gif"></a>
-</td>
-<td class="demoTitle">
-Sicilienne (von Paradies)</td>
-<td class="demoDesc">This lovely and little-known piece is the work of a blind woman musician from the time of Beethoven.</td>
-</tr>
+    <tr valign="top">
+        <td class="demoIcon" nowrap="true">
+            <div class="gv_icon_play" data-song="https://mckenzieduo.com/sounds/Sicilienne-x.mp3" onclick="togglePlay(this)"></div></td>
+        </td>
+        <td class="demoTitle">
+            Sicilienne (von Paradies)</td>
+        <td class="demoDesc">This lovely and little-known piece is the work of a blind woman musician from the time of
+            Beethoven.</td>
+    </tr>
 
 
 
-<tr valign="top">
-<td class="demoIcon" nowrap="true">
-    <button onclick="playMe()">Click me</button>
-<a href="https://mckenzieduo.com/sounds/DannyBoy-x.m3u" title="Play - broadband"><img src="../images/play-icon1.gif"></a>
-<a href="https://mckenzieduo.com/sounds/DannyBoy-y.m3u" title="Play - dial-up"><img src="../images/play-icon2.gif"></a>
-<a href="https://mckenzieduo.com/sounds/DannyBoy-x.mp3" title="Download/play mp3"><img src="../images/play-icon4.gif"></a>
-</td>
-<td class="demoTitle">
-Danny Boy</td>
-<td class="demoDesc">Perennial favorite, perhaps the national song of Ireland.</td>
-</tr>
+    <tr valign="top">
+        <td class="demoIcon" nowrap="true">
+            <div class="gv_icon_play" data-song="https://mckenzieduo.com/sounds/DannyBoy-x.mp3" onclick="togglePlay(this)"></div></td>
+        </td>
+        <td class="demoTitle">
+            Danny Boy</td>
+        <td class="demoDesc">Perennial favorite, perhaps the national song of Ireland.</td>
+    </tr>
 
-<tr valign="top">
-<td class="demoIcon" nowrap="true">
-<a href="https://mckenzieduo.com/sounds/BarbaraAllen-x.m3u" title="Play - broadband"><img src="../images/play-icon1.gif"></a>
-<a href="https://mckenzieduo.com/sounds/BarbaraAllen-y.m3u" title="Play - dial-up"><img src="../images/play-icon2.gif"></a>
-<a href="https://mckenzieduo.com/sounds/BarbaraAllen-x.mp3" title="Download/play mp3"><img src="../images/play-icon4.gif"></a>
-</td>
-<td class="demoTitle">
-Barbara Allen</td>
-<td class="demoDesc">Beautiful folk tune, in a stylish arrangment for flute and guitar.</td>
-</tr>
+    <tr valign="top">
+        <td class="demoIcon" nowrap="true">
+            <div class="gv_icon_play" data-song="https://mckenzieduo.com/sounds/BarbaraAllen-x.mp3" onclick="togglePlay(this)"></div></td>
+        </td>
+        <td class="demoTitle">
+            Barbara Allen</td>
+        <td class="demoDesc">Beautiful folk tune, in a stylish arrangment for flute and guitar.</td>
+    </tr>
 
-<tr valign="top">
-<td class="demoIcon" nowrap="true">
-<a href="https://mckenzieduo.com/sounds/HaydnSerenade-x.m3u" title="Play - broadband"><img src="../images/play-icon1.gif"></a>
-<a href="https://mckenzieduo.com/sounds/HaydnSerenade-y.m3u" title="Play - dial-up"><img src="../images/play-icon2.gif"></a>
-<a href="https://mckenzieduo.com/sounds/HaydnSerenade-x.mp3" title="Download/play mp3"><img src="../images/play-icon4.gif"></a>
-</td>
-<td class="demoTitle">
-Serenade</td>
-<td class="demoDesc">Familiar classical melody, which may or not be the work or Haydn.</td>
-</tr>
+    <tr valign="top">
+        <td class="demoIcon" nowrap="true">
+            <div class="gv_icon_play" data-song="https://mckenzieduo.com/sounds/HaydnSerenade-x.mp3" onclick="togglePlay(this)"></div></td>
+        </td>
+        <td class="demoTitle">
+            Serenade</td>
+        <td class="demoDesc">Familiar classical melody, which may or not be the work or Haydn.</td>
+    </tr>
 
-<tr valign="top">
-<td class="demoIcon" nowrap="true">
-<a href="https://mckenzieduo.com/sounds/FayneWouldIWedd-x.m3u" title="Play - broadband"><img src="../images/play-icon1.gif"></a>
-<a href="https://mckenzieduo.com/sounds/FayneWouldIWedd-y.m3u" title="Play - dial-up"><img src="../images/play-icon2.gif"></a>
-<a href="https://mckenzieduo.com/sounds/FayneWouldIWedd-x.mp3" title="Download/play mp3"><img src="../images/play-icon4.gif"></a>
-</td>
-<td class="demoTitle">
-Fayne Would I Wedd (Farnaby)</td>
-<td class="demoDesc">A lively dance from Shakespeare's time.</td>
-</tr>
+    <tr valign="top">
+        <td class="demoIcon" nowrap="true">
+            <div class="gv_icon_play" data-song="https://mckenzieduo.com/sounds/FayneWouldIWedd-x.mp3" onclick="togglePlay(this)"></div></td>
+        </td>
+        <td class="demoTitle">
+            Fayne Would I Wedd (Farnaby)</td>
+        <td class="demoDesc">A lively dance from Shakespeare's time.</td>
+    </tr>
 
-<tr valign="top">
-<td class="demoIcon" nowrap="true">
-<a href="https://mckenzieduo.com/sounds/Almain-x.m3u" title="Play - broadband"><img src="../images/play-icon1.gif"></a>
-<a href="https://mckenzieduo.com/sounds/Almain-y.m3u" title="Play - dial-up"><img src="../images/play-icon2.gif"></a>
-<a href="https://mckenzieduo.com/sounds/Almain-x.mp3" title="Download/play mp3"><img src="../images/play-icon4.gif"></a>
-</td>
-<td class="demoTitle">
-Almain (Morley)</td>
-<td class="demoDesc">A happy little Renaissance tune.</td>
-</tr>
+    <tr valign="top">
+        <td class="demoIcon" nowrap="true">
+            <div class="gv_icon_play" data-song="https://mckenzieduo.com/sounds/Almain-x.mp3" onclick="togglePlay(this)"></div></td>
+        </td>
+        <td class="demoTitle">
+            Almain (Morley)</td>
+        <td class="demoDesc">A happy little Renaissance tune.</td>
+    </tr>
 
-<tr valign="top">
-<td class="demoIcon" nowrap="true">
-<a href="https://mckenzieduo.com/sounds/Pavanne1-x.m3u" title="Play - broadband"><img src="../images/play-icon1.gif"></a>
-<a href="https://mckenzieduo.com/sounds/Pavanne1-y.m3u" title="Play - dial-up"><img src="../images/play-icon2.gif"></a>
-<a href="https://mckenzieduo.com/sounds/Pavanne1-x.mp3" title="Download/play mp3"><img src="../images/play-icon4.gif"></a>
-</td>
-<td class="demoTitle">
-Pavane Pour Une Infante Defunte</td>
-<td class="demoDesc">Ravel's beautifully melancholy elegy for an imaginary princess.</td>
-</tr>
+    <tr valign="top">
+        <td class="demoIcon" nowrap="true">
+            <div class="gv_icon_play" data-song="https://mckenzieduo.com/sounds/Pavanne1-x.mp3" onclick="togglePlay(this)"></div></td>
+        </td>
+        <td class="demoTitle">
+            Pavane Pour Une Infante Defunte</td>
+        <td class="demoDesc">Ravel's beautifully melancholy elegy for an imaginary princess.</td>
+    </tr>
 
 </table>
 
-<audio id="audio" preload="none" tabindex="0">
-    <source src="https://mckenzieduo.com/sounds/demo-full.mp3" data-track-number="1" />
-    <source src="https://mckenzieduo.com/sounds/Rondo.mp3" data-track-number="2" />
-    Your browser does not support HTML5 audio.
-</audio>
+
+
+
+</div>
