@@ -89,7 +89,7 @@ body {
 .page-sidebar {
   grid-column: 1 / 2;
   grid-row: 2 / 4;
-  background: var(--bg1);
+  background: var(--bg3);
 }
 
 .page-nav {
@@ -371,6 +371,9 @@ div.ii > img{
   padding: 0;
   margin: 1em 0;
   align-items: center;
+  padding: 8px;
+  border: 1px solid var(--bg3);
+  border-radius: 8px;
 }
 
 #player_box > div {
@@ -401,4 +404,22 @@ div.ii > img{
 
 tr.playlist_playing {
   background-color: var(--bg2);
+}
+
+
+tr.playlist_playing > td:first-child,
+tr.playlist_playing > th:first-child {
+  border-radius: 8px 0 0 8px;
+}
+
+tr.playlist_playing > td:last-child,
+tr.playlist_playing > th:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+.mc_logo {
+  background-image: url(./images/duo-logo.png);
+  background-repeat: no-repeat;
+  width: 390px;
+  height: 62px;
 }
