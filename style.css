@@ -1,425 +1,593 @@
-:root {
-  --xbg1: #e4e4e4;
-  --xbg2: #3f8f4f;
-  --xbg3: #e1bee7;
-  --xbg4: #bbdefb;
-  --xbg5: #dcedc8;
-  --xbg6: #ffecb3;
-  /* CSS HEX */
-  --raisin-black: #212227;
-  --dim-gray: #637074;
-  --cool-gray: #8693ab;
-  --powder-blue: #aab9cf;
-  --columbia-blue: #bdd4e7;
-  --cool-white: #f1f2f7;
+/*
+ * Made by Erik Terwan
+ * 24th of November 2015
+ * MIT License
+ *
+ *
+ * If you are thinking of using this in
+ * production code, beware of the browser
+ * prefixes.
+ */
 
-  --bg1: var(--raisin-black);
-  --bg2: var(--dim-gray);
-  --bg3: var(--cool-gray);
-  --bg4: var(--powder-blue);
-  --bg5: var(--columbia-blue);
-  --bg6: var(--cool-white);
+ body
+ {
+   margin: 0;
+   padding: 0;
+   
+   /* make it look decent enough */
+   background: #232323;
+   color: #cdcdcd;
+   font-family: "Avenir Next", "Avenir", sans-serif;
+ }
+ 
+ #menuToggle
+ {
+   display: block;
+   position: relative;
+   top: 0;
+   left: 0;
+   
+   z-index: 1;
+   
+   -webkit-user-select: none;
+   user-select: none;
+ }
+ 
+ #menuToggle a
+ {
+   text-decoration: none;
+   color: #232323;
+   
+   transition: color 0.3s ease;
+ }
+ 
+ #menuToggle a:hover
+ {
+   color: tomato;
+ }
+ 
+ 
+ #menuToggle input
+ {
+   display: block;
+   width: 40px;
+   height: 32px;
+   position: absolute;
+   top: -7px;
+   left: -5px;
+   
+   cursor: pointer;
+   
+   opacity: 0; /* hide this */
+   z-index: 2; /* and place it over the hamburger */
+   
+   -webkit-touch-callout: none;
+ }
+ 
+ /*
+  * Just a quick hamburger
+  */
+ #menuToggle span
+ {
+   display: block;
+   width: 33px;
+   height: 4px;
+   margin-bottom: 5px;
+   position: relative;
+   
+   background: #cdcdcd;
+   border-radius: 3px;
+   
+   z-index: 1;
+   
+   transform-origin: 4px 0px;
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               opacity 0.55s ease;
+ }
+ 
+ #menuToggle span:first-child
+ {
+   transform-origin: 0% 0%;
+ }
+ 
+ #menuToggle span:nth-last-child(2)
+ {
+   transform-origin: 0% 100%;
+ }
+ 
+ /* 
+  * Transform all the slices of hamburger
+  * into a crossmark.
+  */
+ #menuToggle input:checked ~ span
+ {
+   opacity: 1;
+   transform: rotate(45deg) translate(-2px, -1px);
+   background: #232323;
+ }
+ 
+ /*
+  * But let's hide the middle one.
+  */
+ #menuToggle input:checked ~ span:nth-last-child(3)
+ {
+   opacity: 0;
+   transform: rotate(0deg) scale(0.2, 0.2);
+ }
+ 
+ /*
+  * Ohyeah and the last one should go the other direction
+  */
+ #menuToggle input:checked ~ span:nth-last-child(2)
+ {
+   transform: rotate(-45deg) translate(0, -1px);
+ }
+ 
+ /*
+  * Make this absolute positioned
+  * at the top left of the screen
+  */
+ #menu
+ {
+   position: absolute;
+   width: 300px;
+   margin: -102px 0 0 -16px;
+   padding: 50px;
+   padding-top: 125px;
+   
+   background: #ededed;
+   list-style-type: none;
+   -webkit-font-smoothing: antialiased;
+   /* to stop flickering of text in safari */
+   
+   transform-origin: 0% 0%;
+   transform: translate(-105%, 0);
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+ }
+ 
+ #menu li
+ {
+   padding: 10px 0;
+   font-size: 22px;
+ }
+ 
+ /*
+  * And let's slide it in from the left
+  */
+ #menuToggle input:checked ~ ul
+ {
+   transform: none;
+ }
+ 
+ :root {
+   --xbg1: #e4e4e4;
+   --xbg2: #3f8f4f;
+   --xbg3: #e1bee7;
+   --xbg4: #bbdefb;
+   --xbg5: #dcedc8;
+   --xbg6: #ffecb3;
+   /* CSS HEX */
+   --raisin-black: #212227;
+   --dim-gray: #637074;
+   --cool-gray: #8693ab;
+   --powder-blue: #aab9cf;
+   --columbia-blue: #bdd4e7;
+   --cool-white: #f1f2f7;
+ 
+   --bg1: var(--raisin-black);
+   --bg2: var(--dim-gray);
+   --bg3: var(--cool-gray);
+   --bg4: var(--powder-blue);
+   --bg5: var(--columbia-blue);
+   --bg6: var(--cool-white);
+ 
+   --text6: var(--raisin-black);
+   --text5: var(--dim-gray);
+   --text4: var(--cool-gray);
+   --text3: var(--powder-blue);
+   --text2: var(--columbia-blue);
+   --text1: var(--cool-white);
+ 
+   --font1: Open Sans, Arial, sans-serif;
+ 
+   --play-button-svg-cool-white: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg width='800px' height='800px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='10' stroke='%23f1f2f7' stroke-width='1.5'/%3E%3Cpath d='M15.4137 10.941C16.1954 11.4026 16.1954 12.5974 15.4137 13.059L10.6935 15.8458C9.93371 16.2944 9 15.7105 9 14.7868L9 9.21316C9 8.28947 9.93371 7.70561 10.6935 8.15419L15.4137 10.941Z' stroke='%23f1f2f7' stroke-width='1.5'/%3E%3C/svg%3E");
+   --pause-button-svg-cool-white: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg width='800px' height='800px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='10' stroke='%23f1f2f7' stroke-width='1.5'/%3E%3Cpath id='Vector' d='M14 9V15M10 9V15M12' stroke='%23f1f2f7' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+ 
+   --play-button-svg-raisin-black: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg width='800px' height='800px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='10' stroke='%23212227' stroke-width='1.5'/%3E%3Cpath d='M15.4137 10.941C16.1954 11.4026 16.1954 12.5974 15.4137 13.059L10.6935 15.8458C9.93371 16.2944 9 15.7105 9 14.7868L9 9.21316C9 8.28947 9.93371 7.70561 10.6935 8.15419L15.4137 10.941Z' stroke='%23212227' stroke-width='1.5'/%3E%3C/svg%3E");
+   --pause-button-svg-raisin-black: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg width='800px' height='800px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='10' stroke='%23212227' stroke-width='1.5'/%3E%3Cpath id='Vector' d='M14 9V15M10 9V15M12' stroke='%23212227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+ 
+   --pause-filled-dark: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg width='800px' height='800px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='10' stroke='%231C274C' fill='white' stroke-width='1.5'/%3E%3Cpath id='Vector' d='M14 9V15M10 9V15M12' stroke='%231C274C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+   --play-filled-dark: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg width='800px' height='800px' viewBox='0 0 24 24' fill='%23ccccff' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='10' stroke='%231C274C' stroke-width='1.5'/%3E%3Cpath fill='%231C274C' d='M15.4137 10.941C16.1954 11.4026 16.1954 12.5974 15.4137 13.059L10.6935 15.8458C9.93371 16.2944 9 15.7105 9 14.7868L9 9.21316C9 8.28947 9.93371 7.70561 10.6935 8.15419L15.4137 10.941Z' stroke='%231C274C' stroke-width='1.5'/%3E%3C/svg%3E");
+ }
+ 
+ * {
+   box-sizing: border-box;
+   color: var(--text2);
+ 
+ }
+ 
+ body {
+   background: var(--bg1);
+   padding: 5px;
+   height: 100vh;
+   margin: 0;
+   font-family: var(--font1);
+   font-size: 100%;
+ 
+ }
+ 
+ .page-wrap {
+   background: var(--cool-gray);
+   height: calc(100vh - 10px);
+   box-shadow: 0 0 3px rgba(black, 0.33);
+ 
+   display: grid;
+   grid-template-columns: minmax(10px, 1fr) minmax(10px, 3fr);
+   grid-template-rows: min-content min-content 1fr min-content;
+   gap: 0px;
+ 
+   >* {
+     padding: 1rem;
+     text-align: left;
+   }
+ 
+   @media (max-width: 600px) {
+     grid-template-columns: 100%;
+     grid-template-rows: auto;
+ 
+     >* {
+       grid-column: 1 / -1 !important;
+       grid-row: auto !important;
+     }
+   }
+ }
+ 
+ .page-header {
+   grid-column: 1 / -1;
+   background: var(--bg2);
+ }
+ 
+ .page-sidebar {
+   grid-column: 1 / 2;
+   grid-row: 2 / 4;
+   background: var(--bg1);
+ }
+ 
+ .page-nav {
+   grid-column: 2 / 3;
+   background: var(--bg1);
+ }
+ 
+ .page-main {
+   grid-column: 2 / 3;
+   background: var(--bg1);
+ }
+ 
+ .page-footer {
+   grid-column: 1 / -1;
+   background: var(--bg2);
+   display: grid;
+   grid-template-columns: auto auto auto;
+   justify-content: space-between;
+ }
+ 
+ details p {
+   text-transform: none;
+   text-align: left;
+ }
+ 
+ 
+ 
+ 
+ 
+ .logo {
+   position: absolute;
+   left: 0;
+   padding: 0.8rem;
+   font-size: 2.4rem;
+   font-weight: bold;
+ }
+ 
+ .menu {
+   padding: 0;
+   margin: 1rem 0;
+   position: absolute;
+   right: 0;
+   list-style: none;
+ }
+ 
+ .menu__item {
+   display: inline-block;
+   padding: 0 0.8rem;
+   transition: 250ms ease;
+ }
+ 
+ .menu__item:hover {
+   color: #666;
+ }
+ 
+ .menu__item>a {
+   color: inherit;
+   text-decoration: none;
+ }
+ 
+ progress[value] {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+ }
+ 
+ progress[value] {
+ 
+   width: 50%;
+   height: 12px;
+   color: red;
+   background: #ccf;
+   display: block;
+ }
+ 
+ 
+ progress[value] {
+   --color: #8888dd;
+   /* the progress color */
+   --background: transparent;
+   /* the background color */
+   --color2: #aaaaaa;
+   /* the progress color */
+   --background2: #cccccc;
+   /* the background color */
+ 
+ 
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   border: none;
+   width: 50%;
+   max-width: 300px;
+   margin: 0 10px;
+   border-radius: 10em;
+   background: var(--background);
+ }
+ 
+ progress[value]::-webkit-progress-bar {
+   border-radius: 10em;
+   background: var(--background);
+ }
+ 
+ progress[value]::-webkit-progress-value {
+   border-radius: 10em;
+   background: var(--color);
+ }
+ 
+ progress[value]::-moz-progress-bar {
+   border-radius: 10em;
+   background: var(--color);
+ }
+ 
+ 
+ progress[value]#pp2 {
+ 
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   border: none;
+   width: 50%;
+   max-width: 300px;
+   margin: 0 10px;
+   border-radius: 10em;
+   background: var(--background);
+ }
+ 
+ progress[value]#pp2::-webkit-progress-bar {
+   border-radius: 10em;
+   background: var(--background2);
+ }
+ 
+ progress[value]#pp2::-webkit-progress-value {
+   border-radius: 10em;
+   background: var(--color2);
+ }
+ 
+ progress[value]#pp2::-moz-progress-bar {
+   border-radius: 10em;
+   background: var(--color2);
+ }
+ 
+ 
+ 
+ 
+ 
+ #pp_label {
+   width: 50%;
+   background: --bg5;
+   text-align: center;
+   margin: .5em 10px;
+   max-width: 300px;
+ }
+ 
+ .pp_container {
+   position: relative;
+ }
+ 
+ #pp {
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 50;
+ }
+ 
+ #pp2 {
+   z-index: 100;
+ }
+ 
+ 
+ .play_button {
+   border: 0;
+   background: white;
+   box-sizing: border-box;
+   width: 0;
+   height: 74px;
+ 
+   border-color: transparent transparent transparent #202020;
+   transition: 100ms all ease;
+   cursor: pointer;
+ 
+   border-style: solid;
+   border-width: 37px 0 37px 60px;
+ 
+ }
+ 
+ .play_button.paused {
+   border-style: double;
+   border-width: 0px 0 0px 60px;
+ }
+ 
+ .play_button:hover {
+   border-color: transparent transparent transparent #404040;
+ }
+ 
+ 
+ .gv_icon_play {
+   background-image: var(--play-button-svg-cool-white);
+   background-size: cover;
+   height: 1.2em;
+   width: 1.2em;
+   display: inline-block;
+ }
+ 
+ .gv_icon_play.gv_icon_pause {
+   background-image: var(--pause-button-svg-cool-white);
+   background-size: cover;
+   height: 1.2em;
+   width: 1.2em;
+   display: inline-block;
+ }
+ 
+ .gv_icon_play_dark {
+   background-image: var(--play-button-svg-raisin-black);
+   background-size: cover;
+   height: 1.2em;
+   width: 1.2em;
+   display: inline-block;
+ }
+ 
+ .gv_icon_play_dark.gv_icon_pause {
+   background-image: var(--pause-button-svg-raisin-black);
+   background-size: cover;
+   height: 1.2em;
+   width: 1.2em;
+   display: inline-block;
+ }
+ 
+ .gv_icon_play_filled {
+   background-image: var(--play-filled-dark);
+   background-size: cover;
+   height: 1.2em;
+   width: 1.2em;
+   display: inline-block;
+ }
+ 
+ .gv_icon_play_filled.gv_icon_pause {
+   background-image: var(--pause-filled-dark);
+   background-size: cover;
+   height: 1.2em;
+   width: 1.2em;
+   display: inline-block;
+ }
+ 
+ .gv_iconv {
+   height: 1.2em;
+   width: 1.2em;
+   margin-left: auto;
+   margin-right: auto;
+   display: inline-block;
+ }
+ 
+ div.ii > img{
+   width: 60px;
+   height: 60px;
+ }
+ 
+ #play_label { grid-area: label }
+ 
+ #pp_label { 
+   grid-area: numbers; 
+ }
+ #play_master { 
+   grid-area: button; 
+ }
+ #progress_top { 
+   grid-area: progress; 
+ }
+ 
+ #player_box {
+   display: grid;
+   grid-template-areas:
+     'button label label'
+     'button progress numbers';
+   grid-template-columns: 32px 200px;
+   gap: 8px;
+   background-color: var(--bg1);
+   width: 100%;
+   padding: 0;
+   margin: 1em 0;
+   align-items: center;
+   padding: 8px;
+   border: 1px solid var(--bg3);
+   border-radius: 8px;
+ }
+ 
+ #player_box > div {
+   text-align: left;
+ }
+ #player_box progress[value]#pp,
+ #player_box progress[value]#pp2 {
+   width: 100%;
+   margin: 0;
+ }
+ #player_box #pp_label {
+   margin: 0;
+   width: auto;
+ }
+ 
+ #player_box #play_master {
+   width: 32px;
+   height: 32px;
+ }
+ 
+ .listening_room {
+   position: relative;
+ }
+ 
+ .listening_list {
+   border-spacing: 0;
+ }
+ 
+ tr.playlist_playing {
+   background-color: var(--bg2);
+ }
+ 
+ 
+ tr.playlist_playing > td:first-child,
+ tr.playlist_playing > th:first-child {
+   border-radius: 8px 0 0 8px;
+ }
+ 
+ tr.playlist_playing > td:last-child,
+ tr.playlist_playing > th:last-child {
+   border-radius: 0 8px 8px 0;
+ }
+ 
+ .mc_logo {
+   background-image: url(./images/duo-logo.png);
+   background-repeat: no-repeat;
+   width: 390px;
+   height: 62px;
+ }
 
-  --text6: var(--raisin-black);
-  --text5: var(--dim-gray);
-  --text4: var(--cool-gray);
-  --text3: var(--powder-blue);
-  --text2: var(--columbia-blue);
-  --text1: var(--cool-white);
-
-  --font1: Open Sans, Arial, sans-serif;
-
-  --play-button-svg-cool-white: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg width='800px' height='800px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='10' stroke='%23f1f2f7' stroke-width='1.5'/%3E%3Cpath d='M15.4137 10.941C16.1954 11.4026 16.1954 12.5974 15.4137 13.059L10.6935 15.8458C9.93371 16.2944 9 15.7105 9 14.7868L9 9.21316C9 8.28947 9.93371 7.70561 10.6935 8.15419L15.4137 10.941Z' stroke='%23f1f2f7' stroke-width='1.5'/%3E%3C/svg%3E");
-  --pause-button-svg-cool-white: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg width='800px' height='800px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='10' stroke='%23f1f2f7' stroke-width='1.5'/%3E%3Cpath id='Vector' d='M14 9V15M10 9V15M12' stroke='%23f1f2f7' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-
-  --play-button-svg-raisin-black: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg width='800px' height='800px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='10' stroke='%23212227' stroke-width='1.5'/%3E%3Cpath d='M15.4137 10.941C16.1954 11.4026 16.1954 12.5974 15.4137 13.059L10.6935 15.8458C9.93371 16.2944 9 15.7105 9 14.7868L9 9.21316C9 8.28947 9.93371 7.70561 10.6935 8.15419L15.4137 10.941Z' stroke='%23212227' stroke-width='1.5'/%3E%3C/svg%3E");
-  --pause-button-svg-raisin-black: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg width='800px' height='800px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='10' stroke='%23212227' stroke-width='1.5'/%3E%3Cpath id='Vector' d='M14 9V15M10 9V15M12' stroke='%23212227' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-
-  --pause-filled-dark: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg width='800px' height='800px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='10' stroke='%231C274C' fill='white' stroke-width='1.5'/%3E%3Cpath id='Vector' d='M14 9V15M10 9V15M12' stroke='%231C274C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-  --play-filled-dark: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg width='800px' height='800px' viewBox='0 0 24 24' fill='%23ccccff' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='10' stroke='%231C274C' stroke-width='1.5'/%3E%3Cpath fill='%231C274C' d='M15.4137 10.941C16.1954 11.4026 16.1954 12.5974 15.4137 13.059L10.6935 15.8458C9.93371 16.2944 9 15.7105 9 14.7868L9 9.21316C9 8.28947 9.93371 7.70561 10.6935 8.15419L15.4137 10.941Z' stroke='%231C274C' stroke-width='1.5'/%3E%3C/svg%3E");
-}
-
-* {
-  box-sizing: border-box;
-  color: var(--text2);
-
-}
-
-body {
-  background: var(--bg1);
-  padding: 5px;
-  height: 100vh;
-  margin: 0;
-  font-family: var(--font1);
-  font-size: 100%;
-
-}
-
-.page-wrap {
-  background: var(--cool-gray);
-  height: calc(100vh - 10px);
-  box-shadow: 0 0 3px rgba(black, 0.33);
-
-  display: grid;
-  grid-template-columns: minmax(10px, 1fr) minmax(10px, 3fr);
-  grid-template-rows: min-content min-content 1fr min-content;
-  gap: 0px;
-
-  >* {
-    padding: 1rem;
-    text-align: left;
-  }
-
-  @media (max-width: 600px) {
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-
-    >* {
-      grid-column: 1 / -1 !important;
-      grid-row: auto !important;
-    }
-  }
-}
-
-.page-header {
-  grid-column: 1 / -1;
-  background: var(--bg2);
-}
-
-.page-sidebar {
-  grid-column: 1 / 2;
-  grid-row: 2 / 4;
-  background: var(--bg3);
-}
-
-.page-nav {
-  grid-column: 2 / 3;
-  background: var(--bg1);
-}
-
-.page-main {
-  grid-column: 2 / 3;
-  background: var(--bg1);
-}
-
-.page-footer {
-  grid-column: 1 / -1;
-  background: var(--bg2);
-  display: grid;
-  grid-template-columns: auto auto auto;
-  justify-content: space-between;
-}
-
-details p {
-  text-transform: none;
-  text-align: left;
-}
-
-
-
-
-
-.logo {
-  position: absolute;
-  left: 0;
-  padding: 0.8rem;
-  font-size: 2.4rem;
-  font-weight: bold;
-}
-
-.menu {
-  padding: 0;
-  margin: 1rem 0;
-  position: absolute;
-  right: 0;
-  list-style: none;
-}
-
-.menu__item {
-  display: inline-block;
-  padding: 0 0.8rem;
-  transition: 250ms ease;
-}
-
-.menu__item:hover {
-  color: #666;
-}
-
-.menu__item>a {
-  color: inherit;
-  text-decoration: none;
-}
-
-progress[value] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-progress[value] {
-
+ .side-show > img {
   width: 50%;
-  height: 12px;
-  color: red;
-  background: #ccf;
-  display: block;
-}
-
-
-progress[value] {
-  --color: #8888dd;
-  /* the progress color */
-  --background: transparent;
-  /* the background color */
-  --color2: #aaaaaa;
-  /* the progress color */
-  --background2: #cccccc;
-  /* the background color */
-
-
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-  width: 50%;
-  max-width: 300px;
-  margin: 0 10px;
-  border-radius: 10em;
-  background: var(--background);
-}
-
-progress[value]::-webkit-progress-bar {
-  border-radius: 10em;
-  background: var(--background);
-}
-
-progress[value]::-webkit-progress-value {
-  border-radius: 10em;
-  background: var(--color);
-}
-
-progress[value]::-moz-progress-bar {
-  border-radius: 10em;
-  background: var(--color);
-}
-
-
-progress[value]#pp2 {
-
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-  width: 50%;
-  max-width: 300px;
-  margin: 0 10px;
-  border-radius: 10em;
-  background: var(--background);
-}
-
-progress[value]#pp2::-webkit-progress-bar {
-  border-radius: 10em;
-  background: var(--background2);
-}
-
-progress[value]#pp2::-webkit-progress-value {
-  border-radius: 10em;
-  background: var(--color2);
-}
-
-progress[value]#pp2::-moz-progress-bar {
-  border-radius: 10em;
-  background: var(--color2);
-}
-
-
-
-
-
-#pp_label {
-  width: 50%;
-  background: --bg5;
-  text-align: center;
-  margin: .5em 10px;
-  max-width: 300px;
-}
-
-.pp_container {
-  position: relative;
-}
-
-#pp {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 50;
-}
-
-#pp2 {
-  z-index: 100;
-}
-
-
-.play_button {
-  border: 0;
-  background: white;
-  box-sizing: border-box;
-  width: 0;
-  height: 74px;
-
-  border-color: transparent transparent transparent #202020;
-  transition: 100ms all ease;
-  cursor: pointer;
-
-  border-style: solid;
-  border-width: 37px 0 37px 60px;
-
-}
-
-.play_button.paused {
-  border-style: double;
-  border-width: 0px 0 0px 60px;
-}
-
-.play_button:hover {
-  border-color: transparent transparent transparent #404040;
-}
-
-
-.gv_icon_play {
-  background-image: var(--play-button-svg-cool-white);
-  background-size: cover;
-  height: 1.2em;
-  width: 1.2em;
-  display: inline-block;
-}
-
-.gv_icon_play.gv_icon_pause {
-  background-image: var(--pause-button-svg-cool-white);
-  background-size: cover;
-  height: 1.2em;
-  width: 1.2em;
-  display: inline-block;
-}
-
-.gv_icon_play_dark {
-  background-image: var(--play-button-svg-raisin-black);
-  background-size: cover;
-  height: 1.2em;
-  width: 1.2em;
-  display: inline-block;
-}
-
-.gv_icon_play_dark.gv_icon_pause {
-  background-image: var(--pause-button-svg-raisin-black);
-  background-size: cover;
-  height: 1.2em;
-  width: 1.2em;
-  display: inline-block;
-}
-
-.gv_icon_play_filled {
-  background-image: var(--play-filled-dark);
-  background-size: cover;
-  height: 1.2em;
-  width: 1.2em;
-  display: inline-block;
-}
-
-.gv_icon_play_filled.gv_icon_pause {
-  background-image: var(--pause-filled-dark);
-  background-size: cover;
-  height: 1.2em;
-  width: 1.2em;
-  display: inline-block;
-}
-
-.gv_iconv {
-  height: 1.2em;
-  width: 1.2em;
-  margin-left: auto;
-  margin-right: auto;
-  display: inline-block;
-}
-
-div.ii > img{
-  width: 60px;
-  height: 60px;
-}
-
-#play_label { grid-area: label }
-
-#pp_label { 
-  grid-area: numbers; 
-}
-#play_master { 
-  grid-area: button; 
-}
-#progress_top { 
-  grid-area: progress; 
-}
-
-#player_box {
-  display: grid;
-  grid-template-areas:
-    'button label label'
-    'button progress numbers';
-  grid-template-columns: 32px 200px;
-  gap: 8px;
-  background-color: var(--bg1);
-  width: 100%;
-  padding: 0;
-  margin: 1em 0;
-  align-items: center;
-  padding: 8px;
-  border: 1px solid var(--bg3);
-  border-radius: 8px;
-}
-
-#player_box > div {
-  text-align: left;
-}
-#player_box progress[value]#pp,
-#player_box progress[value]#pp2 {
-  width: 100%;
-  margin: 0;
-}
-#player_box #pp_label {
-  margin: 0;
-  width: auto;
-}
-
-#player_box #play_master {
-  width: 32px;
-  height: 32px;
-}
-
-.listening_room {
-  position: relative;
-}
-
-.listening_list {
-  border-spacing: 0;
-}
-
-tr.playlist_playing {
-  background-color: var(--bg2);
-}
-
-
-tr.playlist_playing > td:first-child,
-tr.playlist_playing > th:first-child {
-  border-radius: 8px 0 0 8px;
-}
-
-tr.playlist_playing > td:last-child,
-tr.playlist_playing > th:last-child {
-  border-radius: 0 8px 8px 0;
-}
-
-.mc_logo {
-  background-image: url(./images/duo-logo.png);
-  background-repeat: no-repeat;
-  width: 390px;
-  height: 62px;
-}
+ }
