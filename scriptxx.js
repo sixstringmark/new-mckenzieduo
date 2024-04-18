@@ -251,10 +251,15 @@ window.onload = function () {
         if (xpath == "") return;
 
         const container = document.getElementById("container");
+        const aside = document.getElementById("aside");
 
         let x = await fetch("pages/" + xpath + ".html");
         let y = await x.text();
+        let xx = await fetch("pages/" + xpath + "-side.html");
+        let yy = await xx.text();
+
         container.innerHTML = y;
+        aside.innerHTML = yy;
 
         if (xpath == "listen") {
             initPlayer();

@@ -13,66 +13,79 @@
 
 <body>
 
-  <div class="page-wrap">
-    <header class="page-header">
-      <div class="mc_logo"></div>      
+  <div class="holy-grail-grid">
+    <header class="page-header header">
+      <div class="mc_logo"></div>
+      <nav class="page-nav">
+        <li class="menu__item" value="home">Home</li>
+        <li class="menu__item" value="about">About</li>
+        <li class="menu__item" value="listen">Listen</li>
+        <li class="menu__item" value="endorsements">Endorsements</li>
+        <li class="menu__item" value="songlist">Song List</li>
+        <li class="menu__item" value="contact">Contact Us</li>
+      </nav>
     </header>
-    <nav class="page-nav">
-      <li class="menu__item" value="home">Home</li>
-      <li class="menu__item" value="about">About</li>
-      <li class="menu__item" value="listen">Listen</li>
-      <li class="menu__item" value="endorsements">Endorsements</li>
-      <li class="menu__item" value="songlist">Song List</li>
-      <li class="menu__item" value="contact">Contact Us</li>
-    </nav>
-    <main class="page-main" id="container">
+
+    <main class="page-main main-content" id="container">
 
     </main>
-    <aside class="page-sidebar">
-      <!--    Made by Erik Terwan    -->
-<!--   24th of November 2015   -->
-<!--        MIT License        -->
-<nav role="navigation">
-  <div id="menuToggle">
-    <!--
-    A fake / hidden checkbox is used as click reciever,
-    so you can use the :checked selector on it.
-    -->
-    <input type="checkbox" />
-    
-    <!--
-    Some spans to act as a hamburger.
-    
-    They are acting like a real hamburger,
-    not that McDonalds stuff.
-    -->
-    <span></span>
-    <span></span>
-    <span></span>
-    
-    <!--
-    Too bad the menu has to be inside of the button
-    but hey, it's pure CSS magic.
-    -->
-    <ul id="menu">
-      <a href="home"><li>Home</li></a>
-      <a href="about"><li>About</li></a>
-      <a href="listen"><li>Music</li></a>
-      <a href="contact"><li>Contact</li></a>
-      <a href="endorsements"><li>Stories</li></a>
-    </ul>
-  </div>
-</nav>
+    <aside id="aside" class="page-sidebar left-sidebar">
       <div class="side-show">
-      <img src="./images/duo_sketch_for_colorizing2.jpg" />
+        <img src="./images/duo_sketch_for_colorizing2.jpg" />
       </div>
     </aside>
-    <footer class="page-footer">
-      <div><a href="mailto:info@mckenzieduo.com">info@mckenzieduo.com</a></div>
+    <footer class="page-footer footer">
+      <div>left</div>
       <div>&copy;2024 mcmarkio designs</div>
-      <div>847-962-8847</div>
+      <div>right</div>
     </footer>
   </div>
+
+  <nav role="navigation" class="hamburger">
+    <div id="menuToggle">
+      <!--
+      A fake / hidden checkbox is used as click reciever,
+      so you can use the :checked selector on it.
+      -->
+      <input type="checkbox" />
+
+      <!--
+      Some spans to act as a hamburger.
+      
+      They are acting like a real hamburger,
+      not that McDonalds stuff.
+      -->
+      <span></span>
+      <span></span>
+      <span></span>
+
+      <!--
+      Too bad the menu has to be inside of the button
+      but hey, it's pure CSS magic.
+      -->
+      <ul id="menu">
+        <a href="home">
+          <li>Home</li>
+        </a>
+        <a href="about">
+          <li>About</li>
+        </a>
+        <a href="listen">
+          <li>Music</li>
+        </a>
+        <a href="songlist">
+          <li>Song List</li>
+        </a>
+        <a href="contact">
+          <li>Contact</li>
+        </a>
+        <a href="endorsements">
+          <li>Stories</li>
+        </a>
+      </ul>
+    </div>
+  </nav>
+
 
 </body>
 
