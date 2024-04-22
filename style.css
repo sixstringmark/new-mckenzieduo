@@ -1,3 +1,10 @@
+/**
+TODO - 1. use new duo_sketch_dim_gray as icon
+       2. follow icon with new script font
+          McKenzie Duo
+       3. Also, now have sketch images in all
+          the theme colors, larger size
+**/
 @font-face {
   font-family: headingText;
   src: url('./fonts/KaushanScript-Regular.ttf');
