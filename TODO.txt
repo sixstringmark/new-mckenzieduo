@@ -1,0 +1,14 @@
+Keep a common <audio> element and player_config
+when play pressed, 
+   check if element exists and isConnected
+   get by add and add to config if present
+   also check for presence of progress and master
+   play/pause
+
+/**
+TODO - 1. use new duo_sketch_dim_gray as icon
+       2. follow icon with new script font
+          McKenzie Duo
+       3. Also, now have sketch images in all
+          the theme colors, larger size
+**/

@@ -1,10 +1,4 @@
-/**
-TODO - 1. use new duo_sketch_dim_gray as icon
-       2. follow icon with new script font
-          McKenzie Duo
-       3. Also, now have sketch images in all
-          the theme colors, larger size
-**/
+
 @font-face {
   font-family: headingText;
   src: url('./fonts/KaushanScript-Regular.ttf');
@@ -635,6 +629,11 @@ h1, h2, h3, h4, .mc_heading {
 
  .side-show > img {
   max-width: 90%;
+ }
+
+ .sample {
+  margin-left: 2em;
+  font-size: smaller;
  }
 
  /* holy grail grid layout stuff */
