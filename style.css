@@ -765,3 +765,28 @@ body {
 
 
 }
+
+/* Misc creature pics */
+.flute_frog_1, .flute_frog_2, .guitar_frog_1, .guitar_frog_2 {
+  background-size: contain;
+  height: 100%;
+  display: inline-block;
+}
+.flute_frog_1 {
+  background-image: url('./images/flute_frog_1.png');
+  aspect-ratio: 150 / 177;
+}
+
+.guitar_frog_1 {
+  background-image: url('./images/guitar_frog_1.png');
+  aspect-ratio: 150 / 221;
+}
+.flute_frog_2 {
+  background-image: url('./images/flute_frog_2.png');
+  aspect-ratio: 150 / 180;
+}
+
+.guitar_frog_2 {
+  background-image: url('./images/guitar_frog_2.png');
+  aspect-ratio: 150 / 230;
+}

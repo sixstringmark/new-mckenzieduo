@@ -13,4 +13,8 @@ TODO - 1. use new duo_sketch_dim_gray as icon
           McKenzie Duo
        3. Also, now have sketch images in all
           the theme colors, larger size
-**/
+(done!)
+---------------------------------------------------
+TODO 
+   Adjust titles with page load
+
