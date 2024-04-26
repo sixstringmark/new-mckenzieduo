@@ -18,3 +18,18 @@ TODO - 1. use new duo_sketch_dim_gray as icon
 TODO 
    Adjust titles with page load
 
+======================================================
+Faded image borders
+
+masking css mask-image
+
+https://ishadeed.com/article/css-masking/
+
+Note to self - local file mask images DO NOT WORK!
+
+Note - can use mask with div that fills with background image, and
+make mask size 100% 100% to fill the image
+
+Get PNG and SVG here
+
+https://www.svgrepo.com/svg/11104/transverse-flute?edit=true

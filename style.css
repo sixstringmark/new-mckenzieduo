@@ -767,11 +767,15 @@ body {
 }
 
 /* Misc creature pics */
-.flute_frog_1, .flute_frog_2, .guitar_frog_1, .guitar_frog_2 {
+.flute_frog_1,
+.flute_frog_2,
+.guitar_frog_1,
+.guitar_frog_2 {
   background-size: contain;
   height: 100%;
   display: inline-block;
 }
+
 .flute_frog_1 {
   background-image: url('./images/flute_frog_1.png');
   aspect-ratio: 150 / 177;
@@ -781,6 +785,7 @@ body {
   background-image: url('./images/guitar_frog_1.png');
   aspect-ratio: 150 / 221;
 }
+
 .flute_frog_2 {
   background-image: url('./images/flute_frog_2.png');
   aspect-ratio: 150 / 180;
@@ -789,4 +794,25 @@ body {
 .guitar_frog_2 {
   background-image: url('./images/guitar_frog_2.png');
   aspect-ratio: 150 / 230;
+}
+
+.mask1 {
+  -webkit-mask-image: url(./images/w3logo.png);
+  mask-image: url(./images/w3logo.png);
+}
+
+.mask5 {
+  -webkit-mask-image: url(../images/mask5.png);
+  mask-image: url(../images/mask5.png);
+}
+
+.mcmask {
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+  width: 300px; /* this one width controls both image and mask to cover */
+}
+
+.mcmask > img {
+  width: 100%;
 }
