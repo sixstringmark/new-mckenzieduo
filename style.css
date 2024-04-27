@@ -775,6 +775,21 @@ body {
   height: 100%;
   display: inline-block;
 }
+.tiny_frog {
+  height: 40px;
+}
+.small_frog {
+  height: 80px;
+}
+.medium_frog {
+  height: 120px;
+}
+.large_frog {
+  height: 160px;
+}
+.xlarge_frog {
+  height: 200px;
+}
 
 .flute_frog_1 {
   background-image: url('./images/flute_frog_1.png');
@@ -797,22 +812,54 @@ body {
 }
 
 .mask1 {
-  -webkit-mask-image: url(./images/w3logo.png);
-  mask-image: url(./images/w3logo.png);
+  -webkit-mask-image: url(./images/mask1.png);
+  mask-image: url(./images/mask1.png);
+}
+
+.mask2 {
+  -webkit-mask-image: url(../images/.mask2.png);
+  mask-image: url(../images/mask2.png);
+}
+
+.mask3 {
+  -webkit-mask-image: url(./images/mask3.png);
+  mask-image: url(./images/mask3.png);
+}
+
+.mask4 {
+  -webkit-mask-image: url(../images/mask4.png);
+  mask-image: url(../images/mask4.png);
 }
 
 .mask5 {
-  -webkit-mask-image: url(../images/mask5.png);
-  mask-image: url(../images/mask5.png);
+  -webkit-mask-image: url(./images/mask5.png);
+  mask-image: url(./images/mask5.png);
+}
+
+.mask6 {
+  -webkit-mask-image: url(../images/mask6.png);
+  mask-image: url(../images/mask6.png);
+}
+
+.mask7 {
+  -webkit-mask-image: url(./images/mask7.png);
+  mask-image: url(./images/mask7.png);
+}
+
+.mask7a {
+  -webkit-mask-image: url(../images/mask7a.png);
+  mask-image: url(../images/.mask7a.png);
 }
 
 .mcmask {
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   mask-size: 100% 100%;
-  width: 300px; /* this one width controls both image and mask to cover */
+  width: 300px;
+  display: inline-block;
+  /* this one width controls both image and mask to cover */
 }
 
-.mcmask > img {
+.mcmask>img {
   width: 100%;
 }
