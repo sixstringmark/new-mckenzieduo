@@ -767,6 +767,7 @@ body {
 }
 
 /* Misc creature pics */
+.square_icon,
 .flute_frog_1,
 .flute_frog_2,
 .guitar_frog_1,
@@ -775,21 +776,70 @@ body {
   height: 100%;
   display: inline-block;
 }
-.tiny_frog {
+.tiny_frog, .tiny_square {
   height: 40px;
 }
-.small_frog {
+.small_frog, .small_square {
   height: 80px;
 }
-.medium_frog {
+.medium_frog, .medium_square {
   height: 120px;
 }
-.large_frog {
+.large_frog, .large_square{
   height: 160px;
 }
-.xlarge_frog {
+.xlarge_frog, .xlarge_square {
   height: 200px;
 }
+
+.square_icon {
+  aspect-ratio: 1/1;
+}
+
+.flute_icon_raisin_black {
+  background-image: url('./images/transverse-flute-svgrepo-com-raisin-black.png');
+}
+.guitar_icon_raisin_black {
+  background-image: url('./images/guitar-svgrepo-com-raisin-black.png');
+  transform: rotate(-90deg);
+}
+.flute_icon_dim_gray {
+  background-image: url('./images/transverse-flute-svgrepo-com-dim-gray.png');
+}
+.guitar_icon_dim_gray {
+  background-image: url('./images/guitar-svgrepo-com-dim-gray.png');
+  transform: rotate(-90deg);
+}
+.flute_icon_cool_gray {
+  background-image: url('./images/transverse-flute-svgrepo-com-cool-gray.png');
+}
+.guitar_icon_cool_gray {
+  background-image: url('./images/guitar-svgrepo-com-cool-gray.png');
+  transform: rotate(-90deg);
+}
+.flute_icon_powder_blue {
+  background-image: url('./images/transverse-flute-svgrepo-com-powder-blue.png');
+}
+.guitar_icon_powder_blue {
+  background-image: url('./images/guitar-svgrepo-com-powder-blue.png');
+  transform: rotate(-90deg);
+}
+.flute_icon_columbia_blue {
+  background-image: url('./images/transverse-flute-svgrepo-com-columbia-blue.png');
+}
+.guitar_icon_columbia_blue {
+  background-image: url('./images/guitar-svgrepo-com-columbia-blue.png');
+  transform: rotate(-90deg);
+}
+.flute_icon_cool_white {
+  background-image: url('./images/transverse-flute-svgrepo-com-cool-white.png');
+}
+.guitar_icon_cool_white {
+  background-image: url('./images/guitar-svgrepo-com-cool-white.png');
+  transform: rotate(-90deg);
+}
+
+
 
 .flute_frog_1 {
   background-image: url('./images/flute_frog_1.png');
