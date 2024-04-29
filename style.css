@@ -840,6 +840,46 @@ body {
 }
 
 
+.flute_player_raisin_black {
+  background-image: url('./images/flute-player2-raisin-black.png');
+}
+.flute_player_dim_gray {
+  background-image: url('./images/flute-player2-dim-gray.png');
+}
+.flute_player_cool_gray {
+  background-image: url('./images/flute-player2-cool-gray.png');
+}
+.flute_player_powder_blue {
+  background-image: url('./images/flute-player2-powder-blue.png');
+}
+.flute_player_columbia_blue {
+  background-image: url('./images/flute-player2-columbia-blue.png');
+}
+.flute_player_cool_white {
+  background-image: url('./images/flute-player2-cool-white.png');
+}
+
+.guitar_player_raisin_black {
+  background-image: url('./images/guitar-player-1-raisin-black.png');
+}
+.guitar_player_dim_gray {
+  background-image: url('./images/guitar-player-1-dim-gray.png');
+}
+.guitar_player_cool_gray {
+  background-image: url('./images/guitar-player-1-cool-gray.png');
+}
+.guitar_player_powder_blue {
+  background-image: url('./images/guitar-player-1-powder-blue.png');
+}
+.guitar_player_columbia_blue {
+  background-image: url('./images/guitar-player-1-columbia-blue.png');
+}
+.guitar_player_cool_white {
+  background-image: url('./images/guitar-player-1-cool-white.png');
+}
+
+
+
 
 .flute_frog_1 {
   background-image: url('./images/flute_frog_1.png');
