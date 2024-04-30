@@ -770,9 +770,14 @@ body {
 .square_icon,
 .flute_frog_1,
 .flute_frog_2,
+.flute_lady_1,
+.flute_lady_2,
 .guitar_frog_1,
-.guitar_frog_2 {
+.guitar_frog_2,
+.guitar_frog_3,
+.guitar_frog_3a {
   background-size: contain;
+  background-repeat: no-repeat;
   height: 100%;
   display: inline-block;
 }
@@ -795,6 +800,47 @@ body {
 .square_icon {
   aspect-ratio: 1/1;
 }
+
+/** flute-svgrepo-com-keys-columbia-blue **/
+
+.flute_icon2_raisin_black {
+  background-image: url('./images/flute-svgrepo-com-keys-raisin-black.png');
+}
+.flute_icon2_dim_gray {
+  background-image: url('./images/flute-svgrepo-com-keys-dim-gray.png');
+}
+.flute_icon2_cool_gray {
+  background-image: url('./images/flute-svgrepo-com-keys-cool-gray.png');
+}
+.flute_icon2_powder_blue {
+  background-image: url('./images/flute-svgrepo-com-keys-powder-blue.png');
+}
+.flute_icon2_columbia_blue {
+  background-image: url('./images/flute-svgrepo-com-keys-columbia-blue.png');
+}
+.flute_icon2_cool_white {
+  background-image: url('./images/flute-svgrepo-com-keys-cool-white.png');
+}
+
+.guitar_icon2_raisin_black {
+  background-image: url('./images/guitar2-raisin-black.png');
+}
+.guitar_icon2_dim_gray {
+  background-image: url('./images/guitar2-dim-gray.png');
+}
+.guitar_icon2_cool_gray {
+  background-image: url('./images/guitar2-cool-gray.png');
+}
+.guitar_icon2_powder_blue {
+  background-image: url('./images/guitar2-powder-blue.png');
+}
+.guitar_icon2_columbia_blue {
+  background-image: url('./images/guitar2-columbia-blue.png');
+}
+.guitar_icon2_cool_white {
+  background-image: url('./images/guitar2-cool-white.png');
+}
+
 
 .flute_icon_raisin_black {
   background-image: url('./images/transverse-flute-svgrepo-com-raisin-black.png');
@@ -891,6 +937,15 @@ body {
   aspect-ratio: 150 / 221;
 }
 
+.guitar_frog_3 {
+  background-image: url('./images/guitar_frog_3.png');
+  aspect-ratio: 150 / 312;
+}
+.guitar_frog_3a {
+  background-image: url('./images/guitar_frog_3a.png');
+  aspect-ratio: 150 / 282;
+}
+
 .flute_frog_2 {
   background-image: url('./images/flute_frog_2.png');
   aspect-ratio: 150 / 180;
@@ -900,6 +955,16 @@ body {
   background-image: url('./images/guitar_frog_2.png');
   aspect-ratio: 150 / 230;
 }
+
+.flute_lady_1 {
+  background-image: url('./images/flute_lady_1.png');
+  aspect-ratio: 114 / 300;
+}
+.flute_lady_2 {
+  background-image: url('./images/flute_lady_2.png');
+  aspect-ratio: 150 / 373;
+}
+
 
 .mask1 {
   -webkit-mask-image: url(./images/mask1.png);
