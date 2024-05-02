@@ -27,6 +27,13 @@
   src: url('./fonts/NotoSans-Black.ttf');
 }
 
+svg {
+  fill: green !important;
+}
+
+.mcsvg svg path {
+  fill: red;
+}
 
 :root {
   --xbg1: #e4e4e4;
@@ -72,6 +79,269 @@
   --pause-filled-dark: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg width='800px' height='800px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='10' stroke='%231C274C' fill='white' stroke-width='1.5'/%3E%3Cpath id='Vector' d='M14 9V15M10 9V15M12' stroke='%231C274C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   --play-filled-dark: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg width='800px' height='800px' viewBox='0 0 24 24' fill='%23ccccff' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='10' stroke='%231C274C' stroke-width='1.5'/%3E%3Cpath fill='%231C274C' d='M15.4137 10.941C16.1954 11.4026 16.1954 12.5974 15.4137 13.059L10.6935 15.8458C9.93371 16.2944 9 15.7105 9 14.7868L9 9.21316C9 8.28947 9.93371 7.70561 10.6935 8.15419L15.4137 10.941Z' stroke='%231C274C' stroke-width='1.5'/%3E%3C/svg%3E");
 }
+
+
+
+
+/*---- Layout ----*/
+/* div
+{
+	padding: 0;
+	margin: 0;
+}
+
+body
+{
+	padding: 0px 0px 0px 0px;
+	margin: 0px 8px;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 12px;
+} */
+
+.layout
+{
+	margin: auto;
+	padding: 15px;
+	width: 640px;
+	text-align: left;
+}
+
+.layout table
+{
+	width: 620px;
+}
+
+td.masthead
+{
+	padding: 0px 0px 8px 0px;
+}
+
+td.rightnav
+{
+	width: 150px;
+	padding: 0;
+}
+td.leftnav
+{
+	padding: 0;
+}
+td.nuts
+{
+	width: 120px;
+}
+td.gutter
+{
+	width: 15px;
+	padding: 0;
+}
+td.middle
+{
+	padding: 0;
+}
+td.footer
+{
+	padding: 15px 0px 0px 0px;
+}
+.footWrap
+{
+	border: 0px solid black;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	padding: 2px;
+}
+
+.mastWrap
+{
+	padding: 2px;
+}
+
+.leftWrap
+{
+	padding: 0px;
+	border: 1px solid;
+}
+.rightWrap
+{
+	padding: 0px;
+}
+
+.midWrap
+{
+	border: 1px solid black;
+	background: white;
+	padding: 5px;
+	line-height: 1.15em;
+}
+
+
+
+.sidebar
+{
+	font-size: 10px;
+	padding: 4px;
+	border: 1px solid;
+	width: 12em; 
+	float: right; 
+
+	border: 1px solid black; 
+	color: white;
+}
+
+
+img.leftImg
+{
+	float: left;
+	padding: 5px 5px;
+	margin: 2px;
+	position: relative;
+	border: 0px solid;
+}
+img.rightImg
+{
+	float: right;
+	padding: 5px 5px;
+	margin: 2px;
+	position: relative;
+	border: 0px solid;
+}
+
+p.clr
+{
+	clear: both;
+	font-size: 1px;
+	padding: 0;
+	margin: 0;
+}
+
+.footWrap td
+{
+	font-size: 10px;
+}
+.footWrap a
+{
+	text-decoration: none;
+}
+
+td.composer
+{
+	width: 25%;
+	text-align: right;
+	font-size: .9em;
+	padding: 0;
+}
+td.songTitle
+{
+	font-style: italic;
+	font-size: .9em;
+	padding: 0px 0px 0px 10px;
+}
+td.songCategory
+{
+	font-weight: bold;
+	font-size: 1.0em;
+	border: 0px solid black;
+	border-top-width: 1px;
+}
+.categoryDescription
+{
+	font-size: .9em;
+	font-weight: normal;
+}
+.songCategoryx a div
+{
+	display: none;
+}
+.songCategoryx a:hover div
+{
+	color: green;
+	display: block;
+}
+a.catd
+{
+	display: none;
+}
+a:hover .catd
+{
+	color: green;
+	display: block;
+}
+
+.catd
+{
+	color: blue;
+	display: none;
+	position: absolute;
+	background: #fff;
+	top: 1.5em; left: 1.5em;
+	width: 40em;
+	font-size: 9px;
+	padding: 4px;
+	display: none;
+	font-weight: normal;
+	border: 1px solid black;
+}
+
+
+div.row {
+  clear: both;
+  padding-top: 4px;
+  }
+
+div.row span.label {
+  float: left;
+  width: 30%;
+  text-align: right;
+  }
+
+div.row span.formw {
+  float: right;
+  width: 70%;
+  text-align: left;
+  } 
+  
+.formError
+{
+	margin: 0;
+	border: 1px solid;
+	padding: 5px;
+}
+.formThankYou
+{
+	margin: 0;
+	border: 1px solid;
+	padding: 5px;
+}
+
+div.continue
+{
+	text-align: right;
+}
+div.continue a
+{
+  	text-decoration: none;
+}
+  
+  
+.floater
+{
+	float:right;
+	clear:right;
+	height:30px;
+	padding: 0px;
+	position: relative;
+}
+.lefter
+{
+	float:left;
+	clear:left;
+	height:20px;
+	padding: 0px;
+	position: relative;
+	border: 0px solid;
+	margin: 0 1em 0 0;
+}
+  
+
 
 body {
   margin: 0;
@@ -784,6 +1054,14 @@ body {
 .tiny_frog, .tiny_square {
   height: 40px;
 }
+.tiny_square > img,
+.small_square > img,
+.medium_square > img,
+.large_square > img,
+.xlarge_square > img
+{
+  height: 100%;
+}
 .small_frog, .small_square {
   height: 80px;
 }
@@ -1017,4 +1295,22 @@ body {
 
 .mcmask>img {
   width: 100%;
+}
+
+.mailForm {
+	margin: 0;
+	border: 1px solid;
+	padding: 5px;
+  width: fit-content;
+  background-color: var(--bg2);
+}
+
+.mailForm textarea, .mailform input, .mailForm select, .mailForm select option,
+.mailForm input[type="text"], .mailForm input[type="submit"] {
+	margin: 0;
+	border: 1px solid;
+	padding: 5px;
+  font-size: 14px;
+  color: var(--text6);
+  background-color: var(--bg6);
 }

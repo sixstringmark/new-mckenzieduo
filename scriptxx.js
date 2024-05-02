@@ -294,25 +294,6 @@ window.onload = function () {
         });
     });
 
-    async function loadPage(xpath) {
-        if (xpath == "") return;
-
-        const container = document.getElementById("container");
-        const aside = document.getElementById("aside");
-
-        let x = await fetch("pages/" + xpath + ".html");
-        let y = await x.text();
-        let xx = await fetch("pages/" + xpath + "-side.html");
-        let yy = await xx.text();
-
-        container.innerHTML = y;
-        aside.innerHTML = yy;
-
-        initPlayer();
-        // if (xpath == "listen") {
-        //     initPlayer();
-        // }
-    }
 
     // Handle forward/back buttons
     window.addEventListener("popstate", (event) => {
@@ -348,6 +329,26 @@ function secondsToHHMMSS(psec) {
             seconds.toString().padStart(2, '0');
     }
     return timeString;
+}
+
+async function loadPage(xpath) {
+    if (xpath == "") return;
+
+    const container = document.getElementById("container");
+    const aside = document.getElementById("aside");
+
+    let x = await fetch("pages/" + xpath + ".html");
+    let y = await x.text();
+    let xx = await fetch("pages/" + xpath + "-side.html");
+    let yy = await xx.text();
+
+    container.innerHTML = y;
+    aside.innerHTML = yy;
+
+    initPlayer();
+    // if (xpath == "listen") {
+    //     initPlayer();
+    // }
 }
 
 
