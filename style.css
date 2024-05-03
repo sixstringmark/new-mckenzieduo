@@ -98,255 +98,240 @@ body
 	font-size: 12px;
 } */
 
-.layout
-{
-	margin: auto;
-	padding: 15px;
-	width: 640px;
-	text-align: left;
+.layout {
+  margin: auto;
+  padding: 15px;
+  width: 640px;
+  text-align: left;
 }
 
-.layout table
-{
-	width: 620px;
+.layout table {
+  width: 620px;
 }
 
-td.masthead
-{
-	padding: 0px 0px 8px 0px;
+td.masthead {
+  padding: 0px 0px 8px 0px;
 }
 
-td.rightnav
-{
-	width: 150px;
-	padding: 0;
-}
-td.leftnav
-{
-	padding: 0;
-}
-td.nuts
-{
-	width: 120px;
-}
-td.gutter
-{
-	width: 15px;
-	padding: 0;
-}
-td.middle
-{
-	padding: 0;
-}
-td.footer
-{
-	padding: 15px 0px 0px 0px;
-}
-.footWrap
-{
-	border: 0px solid black;
-	border-top-width: 1px;
-	border-bottom-width: 1px;
-	padding: 2px;
+td.rightnav {
+  width: 150px;
+  padding: 0;
 }
 
-.mastWrap
-{
-	padding: 2px;
+td.leftnav {
+  padding: 0;
 }
 
-.leftWrap
-{
-	padding: 0px;
-	border: 1px solid;
-}
-.rightWrap
-{
-	padding: 0px;
+td.nuts {
+  width: 120px;
 }
 
-.midWrap
-{
-	border: 1px solid black;
-	background: white;
-	padding: 5px;
-	line-height: 1.15em;
+td.gutter {
+  width: 15px;
+  padding: 0;
+}
+
+td.middle {
+  padding: 0;
+}
+
+td.footer {
+  padding: 15px 0px 0px 0px;
+}
+
+.footWrap {
+  border: 0px solid black;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  padding: 2px;
+}
+
+.mastWrap {
+  padding: 2px;
+}
+
+.leftWrap {
+  padding: 0px;
+  border: 1px solid;
+}
+
+.rightWrap {
+  padding: 0px;
+}
+
+.midWrap {
+  border: 1px solid black;
+  background: white;
+  padding: 5px;
+  line-height: 1.15em;
 }
 
 
 
-.sidebar
-{
-	font-size: 10px;
-	padding: 4px;
-	border: 1px solid;
-	width: 12em; 
-	float: right; 
+.sidebar {
+  font-size: 10px;
+  padding: 4px;
+  border: 1px solid;
+  width: 12em;
+  float: right;
 
-	border: 1px solid black; 
-	color: white;
-}
-
-
-img.leftImg
-{
-	float: left;
-	padding: 5px 5px;
-	margin: 2px;
-	position: relative;
-	border: 0px solid;
-}
-img.rightImg
-{
-	float: right;
-	padding: 5px 5px;
-	margin: 2px;
-	position: relative;
-	border: 0px solid;
+  border: 1px solid black;
+  color: white;
 }
 
-p.clr
-{
-	clear: both;
-	font-size: 1px;
-	padding: 0;
-	margin: 0;
+
+img.leftImg {
+  float: left;
+  padding: 5px 5px;
+  margin: 2px;
+  position: relative;
+  border: 0px solid;
 }
 
-.footWrap td
-{
-	font-size: 10px;
-}
-.footWrap a
-{
-	text-decoration: none;
-}
-
-td.composer
-{
-	width: 25%;
-	text-align: right;
-	font-size: .9em;
-	padding: 0;
-}
-td.songTitle
-{
-	font-style: italic;
-	font-size: .9em;
-	padding: 0px 0px 0px 10px;
-}
-td.songCategory
-{
-	font-weight: bold;
-	font-size: 1.0em;
-	border: 0px solid black;
-	border-top-width: 1px;
-}
-.categoryDescription
-{
-	font-size: .9em;
-	font-weight: normal;
-}
-.songCategoryx a div
-{
-	display: none;
-}
-.songCategoryx a:hover div
-{
-	color: green;
-	display: block;
-}
-a.catd
-{
-	display: none;
-}
-a:hover .catd
-{
-	color: green;
-	display: block;
+img.rightImg {
+  float: right;
+  padding: 5px 5px;
+  margin: 2px;
+  position: relative;
+  border: 0px solid;
 }
 
-.catd
-{
-	color: blue;
-	display: none;
-	position: absolute;
-	background: #fff;
-	top: 1.5em; left: 1.5em;
-	width: 40em;
-	font-size: 9px;
-	padding: 4px;
-	display: none;
-	font-weight: normal;
-	border: 1px solid black;
+p.clr {
+  clear: both;
+  font-size: 1px;
+  padding: 0;
+  margin: 0;
+}
+
+.footWrap td {
+  font-size: 10px;
+}
+
+.footWrap a {
+  text-decoration: none;
+}
+
+td.composer {
+  width: 25%;
+  text-align: right;
+  font-size: .9em;
+  padding: 0;
+}
+
+td.songTitle {
+  font-style: italic;
+  font-size: .9em;
+  padding: 0px 0px 0px 10px;
+}
+
+td.songCategory {
+  font-weight: bold;
+  font-size: 1.0em;
+  border: 0px solid black;
+  border-top-width: 1px;
+}
+
+.categoryDescription {
+  font-size: .9em;
+  font-weight: normal;
+}
+
+.songCategoryx a div {
+  display: none;
+}
+
+.songCategoryx a:hover div {
+  color: green;
+  display: block;
+}
+
+a.catd {
+  display: none;
+}
+
+a:hover .catd {
+  color: green;
+  display: block;
+}
+
+.catd {
+  color: blue;
+  display: none;
+  position: absolute;
+  background: #fff;
+  top: 1.5em;
+  left: 1.5em;
+  width: 40em;
+  font-size: 9px;
+  padding: 4px;
+  display: none;
+  font-weight: normal;
+  border: 1px solid black;
 }
 
 
 div.row {
   clear: both;
   padding-top: 4px;
-  }
+}
 
 div.row span.label {
   float: left;
   width: 30%;
   text-align: right;
-  }
+}
 
 div.row span.formw {
   float: right;
   width: 70%;
   text-align: left;
-  } 
-  
-.formError
-{
-	margin: 0;
-	border: 1px solid;
-	padding: 5px;
-}
-.formThankYou
-{
-	margin: 0;
-	border: 1px solid;
-	padding: 5px;
 }
 
-div.continue
-{
-	text-align: right;
+.formError {
+  margin: 0;
+  border: 1px solid;
+  padding: 5px;
 }
-div.continue a
-{
-  	text-decoration: none;
+
+.formThankYou {
+  margin: 0;
+  border: 1px solid;
+  padding: 5px;
 }
-  
-  
-.floater
-{
-	float:right;
-	clear:right;
-	height:30px;
-	padding: 0px;
-	position: relative;
+
+div.continue {
+  text-align: right;
 }
-.lefter
-{
-	float:left;
-	clear:left;
-	height:20px;
-	padding: 0px;
-	position: relative;
-	border: 0px solid;
-	margin: 0 1em 0 0;
+
+div.continue a {
+  text-decoration: none;
 }
-  
+
+
+.floater {
+  float: right;
+  clear: right;
+  height: 30px;
+  padding: 0px;
+  position: relative;
+}
+
+.lefter {
+  float: left;
+  clear: left;
+  height: 20px;
+  padding: 0px;
+  position: relative;
+  border: 0px solid;
+  margin: 0 1em 0 0;
+}
+
 
 
 body {
   margin: 0;
   padding: 0;
-  padding-top: 92px;
+  padding-top: 72px;
 
   /* make it look decent enough */
   background: #232323;
@@ -512,7 +497,7 @@ body {
 
 }
 
-.page-wrap {
+/* .xpage-wrap {
   background: var(--cool-gray);
   height: calc(100vh - 10px);
   box-shadow: 0 0 3px rgba(black, 0.33);
@@ -536,7 +521,7 @@ body {
       grid-row: auto !important;
     }
   }
-}
+} */
 
 .page-header {
   /* grid-column: 1 / -1; */
@@ -937,7 +922,7 @@ tr.playlist_playing>th:last-child {
 body {
   margin: 0;
   padding: 0;
-  padding-top: 92px;
+  padding-top: 72px;
   font-size: 100%;
 }
 
@@ -945,10 +930,9 @@ body {
 /* grid container */
 .holy-grail-grid {
   display: grid;
-  grid-template-rows: auto 1fr auto auto auto;
-  grid-template-areas: 'header'
-    'main-content'
-    'left-sidebar'
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+  'main-content'
     'footer';
   min-height: 100vh;
   min-height: 100svh;
@@ -989,28 +973,71 @@ body {
   /* background: #72c2f1; */
 }
 
+/* Here's the inner container nested grid */
+
+#container {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  grid-template-areas:
+  'mc_bumper' 'mc_primary' 'mc_sidebar';
+
+}
+
+.mc-sidebar {
+  grid-area: mc_sidebar;
+}
+.mc-primary {
+  grid-area: mc_primary;
+}
+.mc_bumper {
+  grid-area: mc_bumper;
+}
+
+
 /* tablet breakpoint */
 @media (min-width:768px) {
   .holy-grail-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas:
-      'header header'
-      'main-content main-content'
-      'left-sidebar left-sidebar'
-      'footer footer';
+      'header'
+      'main-content'
+      'footer';
   }
+
+  #container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+    'mc_sidebar mc_primary' 'mc_sidebar mc_bummper';
+  
+  }
+  
 
 }
 
 /* desktop breakpoint */
 @media (min-width:1024px) {
   .holy-grail-grid {
+    grid-template-columns: auto;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      'header'
+      'main-content'
+      'footer';
+  }
+
+  #container {
+    display: grid;
+    grid-template-rows: auto;
     grid-template-columns: 1fr 2fr;
     grid-template-areas:
-      'header header'
-      'left-sidebar main-content'
-      'footer footer';
+    'mc_sidebar mc_primary' 'mc_sidebar mc_bummper';
+  
   }
+  
 
   .page-nav {
     display: block;
@@ -1042,6 +1069,8 @@ body {
 .flute_frog_2,
 .flute_lady_1,
 .flute_lady_2,
+.img_duo_photo,
+.img_red_cedar_house_1,
 .guitar_frog_1,
 .guitar_frog_2,
 .guitar_frog_3,
@@ -1051,27 +1080,37 @@ body {
   height: 100%;
   display: inline-block;
 }
-.tiny_frog, .tiny_square {
+
+.tiny_frog,
+.tiny_square {
   height: 40px;
 }
-.tiny_square > img,
-.small_square > img,
-.medium_square > img,
-.large_square > img,
-.xlarge_square > img
-{
+
+.tiny_square>img,
+.small_square>img,
+.medium_square>img,
+.large_square>img,
+.xlarge_square>img {
   height: 100%;
 }
-.small_frog, .small_square {
+
+.small_frog,
+.small_square {
   height: 80px;
 }
-.medium_frog, .medium_square {
+
+.medium_frog,
+.medium_square {
   height: 120px;
 }
-.large_frog, .large_square{
+
+.large_frog,
+.large_square {
   height: 160px;
 }
-.xlarge_frog, .xlarge_square {
+
+.xlarge_frog,
+.xlarge_square {
   height: 200px;
 }
 
@@ -1084,18 +1123,23 @@ body {
 .flute_icon2_raisin_black {
   background-image: url('./images/flute-svgrepo-com-keys-raisin-black.png');
 }
+
 .flute_icon2_dim_gray {
   background-image: url('./images/flute-svgrepo-com-keys-dim-gray.png');
 }
+
 .flute_icon2_cool_gray {
   background-image: url('./images/flute-svgrepo-com-keys-cool-gray.png');
 }
+
 .flute_icon2_powder_blue {
   background-image: url('./images/flute-svgrepo-com-keys-powder-blue.png');
 }
+
 .flute_icon2_columbia_blue {
   background-image: url('./images/flute-svgrepo-com-keys-columbia-blue.png');
 }
+
 .flute_icon2_cool_white {
   background-image: url('./images/flute-svgrepo-com-keys-cool-white.png');
 }
@@ -1103,18 +1147,23 @@ body {
 .guitar_icon2_raisin_black {
   background-image: url('./images/guitar2-raisin-black.png');
 }
+
 .guitar_icon2_dim_gray {
   background-image: url('./images/guitar2-dim-gray.png');
 }
+
 .guitar_icon2_cool_gray {
   background-image: url('./images/guitar2-cool-gray.png');
 }
+
 .guitar_icon2_powder_blue {
   background-image: url('./images/guitar2-powder-blue.png');
 }
+
 .guitar_icon2_columbia_blue {
   background-image: url('./images/guitar2-columbia-blue.png');
 }
+
 .guitar_icon2_cool_white {
   background-image: url('./images/guitar2-cool-white.png');
 }
@@ -1123,41 +1172,52 @@ body {
 .flute_icon_raisin_black {
   background-image: url('./images/transverse-flute-svgrepo-com-raisin-black.png');
 }
+
 .guitar_icon_raisin_black {
   background-image: url('./images/guitar-svgrepo-com-raisin-black.png');
   transform: rotate(-90deg);
 }
+
 .flute_icon_dim_gray {
   background-image: url('./images/transverse-flute-svgrepo-com-dim-gray.png');
 }
+
 .guitar_icon_dim_gray {
   background-image: url('./images/guitar-svgrepo-com-dim-gray.png');
   transform: rotate(-90deg);
 }
+
 .flute_icon_cool_gray {
   background-image: url('./images/transverse-flute-svgrepo-com-cool-gray.png');
 }
+
 .guitar_icon_cool_gray {
   background-image: url('./images/guitar-svgrepo-com-cool-gray.png');
   transform: rotate(-90deg);
 }
+
 .flute_icon_powder_blue {
   background-image: url('./images/transverse-flute-svgrepo-com-powder-blue.png');
 }
+
 .guitar_icon_powder_blue {
   background-image: url('./images/guitar-svgrepo-com-powder-blue.png');
   transform: rotate(-90deg);
 }
+
 .flute_icon_columbia_blue {
   background-image: url('./images/transverse-flute-svgrepo-com-columbia-blue.png');
 }
+
 .guitar_icon_columbia_blue {
   background-image: url('./images/guitar-svgrepo-com-columbia-blue.png');
   transform: rotate(-90deg);
 }
+
 .flute_icon_cool_white {
   background-image: url('./images/transverse-flute-svgrepo-com-cool-white.png');
 }
+
 .guitar_icon_cool_white {
   background-image: url('./images/guitar-svgrepo-com-cool-white.png');
   transform: rotate(-90deg);
@@ -1167,18 +1227,23 @@ body {
 .flute_player_raisin_black {
   background-image: url('./images/flute-player2-raisin-black.png');
 }
+
 .flute_player_dim_gray {
   background-image: url('./images/flute-player2-dim-gray.png');
 }
+
 .flute_player_cool_gray {
   background-image: url('./images/flute-player2-cool-gray.png');
 }
+
 .flute_player_powder_blue {
   background-image: url('./images/flute-player2-powder-blue.png');
 }
+
 .flute_player_columbia_blue {
   background-image: url('./images/flute-player2-columbia-blue.png');
 }
+
 .flute_player_cool_white {
   background-image: url('./images/flute-player2-cool-white.png');
 }
@@ -1186,18 +1251,23 @@ body {
 .guitar_player_raisin_black {
   background-image: url('./images/guitar-player-1-raisin-black.png');
 }
+
 .guitar_player_dim_gray {
   background-image: url('./images/guitar-player-1-dim-gray.png');
 }
+
 .guitar_player_cool_gray {
   background-image: url('./images/guitar-player-1-cool-gray.png');
 }
+
 .guitar_player_powder_blue {
   background-image: url('./images/guitar-player-1-powder-blue.png');
 }
+
 .guitar_player_columbia_blue {
   background-image: url('./images/guitar-player-1-columbia-blue.png');
 }
+
 .guitar_player_cool_white {
   background-image: url('./images/guitar-player-1-cool-white.png');
 }
@@ -1219,6 +1289,7 @@ body {
   background-image: url('./images/guitar_frog_3.png');
   aspect-ratio: 150 / 312;
 }
+
 .guitar_frog_3a {
   background-image: url('./images/guitar_frog_3a.png');
   aspect-ratio: 150 / 282;
@@ -1238,6 +1309,7 @@ body {
   background-image: url('./images/flute_lady_1.png');
   aspect-ratio: 114 / 300;
 }
+
 .flute_lady_2 {
   background-image: url('./images/flute_lady_2.png');
   aspect-ratio: 150 / 373;
@@ -1292,25 +1364,130 @@ body {
   display: inline-block;
   /* this one width controls both image and mask to cover */
 }
+.mcmask0 {
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+  /* width: 300px; */
+  display: inline-block;
+  /* this one width controls both image and mask to cover */
+}
+.height_tiny {
+  height: 40px;
+}
+.height_large {
+  height: 300px;
+}
+.width_tiny {
+  width: 40px;
+  height: auto;
+}
+.width_medium {
+  width: 96px;
+  height: auto;
+}
 
 .mcmask>img {
   width: 100%;
 }
 
 .mailForm {
-	margin: 0;
-	border: 1px solid;
-	padding: 5px;
-  width: fit-content;
+  margin: 16px 0;
+  padding: 16px;
   background-color: var(--bg2);
+  display: grid;
+  grid-gap: 8px;
+  line-height: 1.3;
+  border-radius: 8px;
 }
 
-.mailForm textarea, .mailform input, .mailForm select, .mailForm select option,
-.mailForm input[type="text"], .mailForm input[type="submit"] {
-	margin: 0;
-	border: 1px solid;
-	padding: 5px;
+.mailForm label,
+.mailForm input[type="submit"] {
+  margin-block-start: 16px;
+}
+
+.mailForm textarea,
+.mailform input,
+.mailForm select,
+.mailForm select option,
+.mailForm input[type="text"],
+.mailForm input[type="submit"] {
+  /* margin: 0; */
+  border: 1px solid;
+  padding: 5px;
   font-size: 14px;
   color: var(--text6);
   background-color: var(--bg6);
 }
+.mailForm textarea {
+  resize: vertical;
+}
+
+.mailForm input[type="submit"] {
+  border-radius: 8px;
+  border-color: var(--bg1);
+  background-color: var(--bg4);
+  color: var(--text6);
+  padding: 8px 16px;
+  min-width: 100px;
+  font-weight: 700;
+  margin-block-end: 16px;
+}
+
+.mailForm input[type="submit"]:hover {
+  border-color: var(--bg5);
+  color: var(--text1);
+}
+
+@media (min-width:768px) {
+
+  .mailForm {
+    background-color: var(--bg2);
+    display: grid;
+    grid-template-columns: auto 2fr;
+    grid-gap: 8px;
+    line-height: 1.3;
+    padding: 24px;
+    align-items: end;
+  }
+  .mailForm label {
+    text-align: right;
+  }
+  .mailForm input[type="submit"]  {
+    grid-column: 2;
+    margin-block-end: auto;
+  }
+}
+
+.img_duo_photo {
+  background-image: url('./images/duo_photo.jpg');
+  aspect-ratio: 400/543;
+}
+.img_red_cedar_house_1 {
+  background-image: url('./images/red-cedar-house-concert-1.jpg');
+  aspect-ratio: 600/406;
+}
+.img_red_cedar_house_2 {
+  background-image: url('./images/red-cedar-house-concert-2.jpg');
+  aspect-ratio: 600/398;
+}
+
+
+/*
+photo info
+
+duo_photo.jpg 400x543
+red-cedar-house-concert-1.jpg 600x406
+red-cedar-house-concert-2.jpg 600x398
+red-cedar-outside.jpg 600x392
+mark-vig-4.jpg 450x315
+mark-with-guitar-goofy.jpg 400x600
+mark-stool.jpg 350x525
+mark-crossed-leg-standing.jpg 400x600
+IMG_0806.JPG (Sue House of Blues) 960x960
+IMG_0807.JPG (Mark House of Blues) 960x686
+duo-hug-ecc-1.jpg 400x533
+sue-vig-1.jpg 350x525
+
+*/
+
