@@ -33,3 +33,10 @@ make mask size 100% 100% to fill the image
 Get PNG and SVG here
 
 https://www.svgrepo.com/svg/11104/transverse-flute?edit=true
+
+=========================================================
+Fill in sidebar and bumper content
+
+Replace old images and decorations
+
+
