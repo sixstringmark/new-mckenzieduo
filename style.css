@@ -180,20 +180,14 @@ td.footer {
 }
 
 
-img.leftImg {
+.leftImg {
   float: left;
-  padding: 5px 5px;
-  margin: 2px;
-  position: relative;
-  border: 0px solid;
+  margin-right: 1.5em;
 }
 
-img.rightImg {
+.rightImg {
   float: right;
-  padding: 5px 5px;
-  margin: 2px;
-  position: relative;
-  border: 0px solid;
+  margin-left: 1.5em;
 }
 
 p.clr {
@@ -960,6 +954,7 @@ body {
 
 .holy-grail-grid>.left-sidebar {
   grid-area: left-sidebar;
+  text-align: center;
   /* background: #f5d55f; */
 }
 
@@ -986,6 +981,7 @@ body {
 
 .mc-sidebar {
   grid-area: mc_sidebar;
+  text-align: center;  
 }
 .mc-primary {
   grid-area: mc_primary;
@@ -1070,8 +1066,6 @@ body {
 .flute_frog_2,
 .flute_lady_1,
 .flute_lady_2,
-.img_duo_photo,
-.img_red_cedar_house_1,
 .guitar_frog_1,
 .guitar_frog_2,
 .guitar_frog_3,
@@ -1356,6 +1350,10 @@ body {
   -webkit-mask-image: url(../images/mask7a.png);
   mask-image: url(../images/.mask7a.png);
 }
+.mask8 {
+  -webkit-mask-image: url(./images/mask8.png);
+  mask-image: url(./images/mask8.png);
+}
 
 .mcmask {
   -webkit-mask-repeat: no-repeat;
@@ -1381,6 +1379,10 @@ body {
 }
 .width_tiny {
   width: 40px;
+  height: auto;
+}
+.width_small {
+  width: 120px;
   height: auto;
 }
 .width_medium {
@@ -1464,18 +1466,109 @@ body {
   }
 }
 
+/* 
+These work with either a width or height definition to render the image.
+Can be combined with mask images
+*/
 .img_duo_photo {
   background-image: url('./images/duo_photo.jpg');
   aspect-ratio: 400/543;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
 }
 .img_red_cedar_house_1 {
   background-image: url('./images/red-cedar-house-concert-1.jpg');
   aspect-ratio: 600/406;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
 }
 .img_red_cedar_house_2 {
   background-image: url('./images/red-cedar-house-concert-2.jpg');
   aspect-ratio: 600/398;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
 }
+.img_red_cedar_outside {
+  background-image: url('./images/red-cedar-outside.jpg');
+  aspect-ratio: 600/392;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_mark_vig_4 {
+  background-image: url('./images/mark-vig-4.jpg');
+  aspect-ratio: 450/315;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_mark_with_guitar_goofy {
+  background-image: url('./images/mark-with-guitar-goofy.jpg');
+  aspect-ratio: 400/600;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_mark_stool {
+  background-image: url('./images/mark-stool.jpg');
+  aspect-ratio: 350/525;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_mark_crossed_leg_standing {
+  background-image: url('./images/mark-crossed-leg-standing.jpg');
+  aspect-ratio: 400/600;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_sue_house_of_blues {
+  background-image: url('./images/IMG_0806.JPG');
+  aspect-ratio: 960/960;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_mark_house_of_blues {
+  background-image: url('./images/IMG_0807.JPG');
+  aspect-ratio: 960/686;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_duo_hug_ecc_1 {
+  background-image: url('./images/duo-hug-ecc-1.jpg');
+  aspect-ratio: 400/533;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_sue_vig_1 {
+  background-image: url('./images/sue-vig-1.jpg');
+  aspect-ratio: 350/525;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_sue_with_flute {
+  background-image: url('./images/sue_with_flute.jpg');
+  aspect-ratio: 300/450;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_duo_sketch_raisin_black {
+  background-image: url('./images/duo_sketch_raisin_black.png');
+  aspect-ratio: 450/520;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
 
 
 /*
@@ -1493,6 +1586,8 @@ IMG_0806.JPG (Sue House of Blues) 960x960
 IMG_0807.JPG (Mark House of Blues) 960x686
 duo-hug-ecc-1.jpg 400x533
 sue-vig-1.jpg 350x525
+images/duo_sketch_raisin_black.png 450x520
+
 
 */
 
