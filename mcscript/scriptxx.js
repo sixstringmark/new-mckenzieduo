@@ -337,9 +337,9 @@ async function loadPage(xpath) {
     const container = document.getElementById("container");
     //const aside = document.getElementById("aside");
 
-    let x = await fetch("pages/" + xpath + ".html");
+    let x = await fetch("mcpages/" + xpath + ".html");
     let y = await x.text();
-    //let xx = await fetch("pages/" + xpath + "-side.html");
+    //let xx = await fetch("mcpages/" + xpath + "-side.html");
     //let yy = await xx.text();
 
     container.innerHTML = y;

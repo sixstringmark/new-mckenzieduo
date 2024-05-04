@@ -1,6 +1,6 @@
 @font-face {
   font-family: headingText;
-  src: url('./fonts/KaushanScript-Regular.ttf');
+  src: url('../mcfonts/KaushanScript-Regular.ttf');
 }
 
 /*
@@ -9,22 +9,22 @@
 */
 @font-face {
   font-family: regularText;
-  src: url('./fonts/NotoSans-Regular.ttf');
+  src: url('../mcfonts/NotoSans-Regular.ttf');
 }
 
 @font-face {
   font-family: condensedText;
-  src: url('NotoSans_Condensed-Regular.ttf');
+  src: url('../mcfonts/NotoSans_Condensed-Regular.ttf');
 }
 
 @font-face {
   font-family: lightText;
-  src: url('./fonts/NotoSans-Light.ttf');
+  src: url('../mcfonts/NotoSans-Light.ttf');
 }
 
 @font-face {
   font-family: blackText;
-  src: url('./fonts/NotoSans-Black.ttf');
+  src: url('../mcfonts/NotoSans-Black.ttf');
 }
 
 svg {
@@ -872,7 +872,7 @@ tr.playlist_playing>th:last-child {
 }
 
 .mc_logo {
-  background-image: url(./images/duo_sketch_dim_gray_2.png);
+  background-image: url(../mcimages/duo_sketch_dim_gray_2.png);
   background-repeat: no-repeat;
   /* background-attachment: fixed; */
   background-origin: padding-box;
@@ -1116,243 +1116,243 @@ body {
 /** flute-svgrepo-com-keys-columbia-blue **/
 
 .flute_icon2_raisin_black {
-  background-image: url('./images/flute-svgrepo-com-keys-raisin-black.png');
+  background-image: url('../mcimages/flute-svgrepo-com-keys-raisin-black.png');
 }
 
 .flute_icon2_dim_gray {
-  background-image: url('./images/flute-svgrepo-com-keys-dim-gray.png');
+  background-image: url('../mcimages/flute-svgrepo-com-keys-dim-gray.png');
 }
 
 .flute_icon2_cool_gray {
-  background-image: url('./images/flute-svgrepo-com-keys-cool-gray.png');
+  background-image: url('../mcimages/flute-svgrepo-com-keys-cool-gray.png');
 }
 
 .flute_icon2_powder_blue {
-  background-image: url('./images/flute-svgrepo-com-keys-powder-blue.png');
+  background-image: url('../mcimages/flute-svgrepo-com-keys-powder-blue.png');
 }
 
 .flute_icon2_columbia_blue {
-  background-image: url('./images/flute-svgrepo-com-keys-columbia-blue.png');
+  background-image: url('../mcimages/flute-svgrepo-com-keys-columbia-blue.png');
 }
 
 .flute_icon2_cool_white {
-  background-image: url('./images/flute-svgrepo-com-keys-cool-white.png');
+  background-image: url('../mcimages/flute-svgrepo-com-keys-cool-white.png');
 }
 
 .guitar_icon2_raisin_black {
-  background-image: url('./images/guitar2-raisin-black.png');
+  background-image: url('../mcimages/guitar2-raisin-black.png');
 }
 
 .guitar_icon2_dim_gray {
-  background-image: url('./images/guitar2-dim-gray.png');
+  background-image: url('../mcimages/guitar2-dim-gray.png');
 }
 
 .guitar_icon2_cool_gray {
-  background-image: url('./images/guitar2-cool-gray.png');
+  background-image: url('../mcimages/guitar2-cool-gray.png');
 }
 
 .guitar_icon2_powder_blue {
-  background-image: url('./images/guitar2-powder-blue.png');
+  background-image: url('../mcimages/guitar2-powder-blue.png');
 }
 
 .guitar_icon2_columbia_blue {
-  background-image: url('./images/guitar2-columbia-blue.png');
+  background-image: url('../mcimages/guitar2-columbia-blue.png');
 }
 
 .guitar_icon2_cool_white {
-  background-image: url('./images/guitar2-cool-white.png');
+  background-image: url('../mcimages/guitar2-cool-white.png');
 }
 
 
 .flute_icon_raisin_black {
-  background-image: url('./images/transverse-flute-svgrepo-com-raisin-black.png');
+  background-image: url('../mcimages/transverse-flute-svgrepo-com-raisin-black.png');
 }
 
 .guitar_icon_raisin_black {
-  background-image: url('./images/guitar-svgrepo-com-raisin-black.png');
+  background-image: url('../mcimages/guitar-svgrepo-com-raisin-black.png');
   transform: rotate(-90deg);
 }
 
 .flute_icon_dim_gray {
-  background-image: url('./images/transverse-flute-svgrepo-com-dim-gray.png');
+  background-image: url('../mcimages/transverse-flute-svgrepo-com-dim-gray.png');
 }
 
 .guitar_icon_dim_gray {
-  background-image: url('./images/guitar-svgrepo-com-dim-gray.png');
+  background-image: url('../mcimages/guitar-svgrepo-com-dim-gray.png');
   transform: rotate(-90deg);
 }
 
 .flute_icon_cool_gray {
-  background-image: url('./images/transverse-flute-svgrepo-com-cool-gray.png');
+  background-image: url('../mcimages/transverse-flute-svgrepo-com-cool-gray.png');
 }
 
 .guitar_icon_cool_gray {
-  background-image: url('./images/guitar-svgrepo-com-cool-gray.png');
+  background-image: url('../mcimages/guitar-svgrepo-com-cool-gray.png');
   transform: rotate(-90deg);
 }
 
 .flute_icon_powder_blue {
-  background-image: url('./images/transverse-flute-svgrepo-com-powder-blue.png');
+  background-image: url('../mcimages/transverse-flute-svgrepo-com-powder-blue.png');
 }
 
 .guitar_icon_powder_blue {
-  background-image: url('./images/guitar-svgrepo-com-powder-blue.png');
+  background-image: url('../mcimages/guitar-svgrepo-com-powder-blue.png');
   transform: rotate(-90deg);
 }
 
 .flute_icon_columbia_blue {
-  background-image: url('./images/transverse-flute-svgrepo-com-columbia-blue.png');
+  background-image: url('../mcimages/transverse-flute-svgrepo-com-columbia-blue.png');
 }
 
 .guitar_icon_columbia_blue {
-  background-image: url('./images/guitar-svgrepo-com-columbia-blue.png');
+  background-image: url('../mcimages/guitar-svgrepo-com-columbia-blue.png');
   transform: rotate(-90deg);
 }
 
 .flute_icon_cool_white {
-  background-image: url('./images/transverse-flute-svgrepo-com-cool-white.png');
+  background-image: url('../mcimages/transverse-flute-svgrepo-com-cool-white.png');
 }
 
 .guitar_icon_cool_white {
-  background-image: url('./images/guitar-svgrepo-com-cool-white.png');
+  background-image: url('../mcimages/guitar-svgrepo-com-cool-white.png');
   transform: rotate(-90deg);
 }
 
 
 .flute_player_raisin_black {
-  background-image: url('./images/flute-player2-raisin-black.png');
+  background-image: url('../mcimages/flute-player2-raisin-black.png');
 }
 
 .flute_player_dim_gray {
-  background-image: url('./images/flute-player2-dim-gray.png');
+  background-image: url('../mcimages/flute-player2-dim-gray.png');
 }
 
 .flute_player_cool_gray {
-  background-image: url('./images/flute-player2-cool-gray.png');
+  background-image: url('../mcimages/flute-player2-cool-gray.png');
 }
 
 .flute_player_powder_blue {
-  background-image: url('./images/flute-player2-powder-blue.png');
+  background-image: url('../mcimages/flute-player2-powder-blue.png');
 }
 
 .flute_player_columbia_blue {
-  background-image: url('./images/flute-player2-columbia-blue.png');
+  background-image: url('../mcimages/flute-player2-columbia-blue.png');
 }
 
 .flute_player_cool_white {
-  background-image: url('./images/flute-player2-cool-white.png');
+  background-image: url('../mcimages/flute-player2-cool-white.png');
 }
 
 .guitar_player_raisin_black {
-  background-image: url('./images/guitar-player-1-raisin-black.png');
+  background-image: url('../mcimages/guitar-player-1-raisin-black.png');
 }
 
 .guitar_player_dim_gray {
-  background-image: url('./images/guitar-player-1-dim-gray.png');
+  background-image: url('../mcimages/guitar-player-1-dim-gray.png');
 }
 
 .guitar_player_cool_gray {
-  background-image: url('./images/guitar-player-1-cool-gray.png');
+  background-image: url('../mcimages/guitar-player-1-cool-gray.png');
 }
 
 .guitar_player_powder_blue {
-  background-image: url('./images/guitar-player-1-powder-blue.png');
+  background-image: url('../mcimages/guitar-player-1-powder-blue.png');
 }
 
 .guitar_player_columbia_blue {
-  background-image: url('./images/guitar-player-1-columbia-blue.png');
+  background-image: url('../mcimages/guitar-player-1-columbia-blue.png');
 }
 
 .guitar_player_cool_white {
-  background-image: url('./images/guitar-player-1-cool-white.png');
+  background-image: url('../mcimages/guitar-player-1-cool-white.png');
 }
 
 
 
 
 .flute_frog_1 {
-  background-image: url('./images/flute_frog_1.png');
+  background-image: url('../mcimages/flute_frog_1.png');
   aspect-ratio: 150 / 177;
 }
 
 .guitar_frog_1 {
-  background-image: url('./images/guitar_frog_1.png');
+  background-image: url('../mcimages/guitar_frog_1.png');
   aspect-ratio: 150 / 221;
 }
 
 .guitar_frog_3 {
-  background-image: url('./images/guitar_frog_3.png');
+  background-image: url('../mcimages/guitar_frog_3.png');
   aspect-ratio: 150 / 312;
 }
 
 .guitar_frog_3a {
-  background-image: url('./images/guitar_frog_3a.png');
+  background-image: url('../mcimages/guitar_frog_3a.png');
   aspect-ratio: 150 / 282;
 }
 
 .flute_frog_2 {
-  background-image: url('./images/flute_frog_2.png');
+  background-image: url('../mcimages/flute_frog_2.png');
   aspect-ratio: 150 / 180;
 }
 
 .guitar_frog_2 {
-  background-image: url('./images/guitar_frog_2.png');
+  background-image: url('../mcimages/guitar_frog_2.png');
   aspect-ratio: 150 / 230;
 }
 
 .flute_lady_1 {
-  background-image: url('./images/flute_lady_1.png');
+  background-image: url('../mcimages/flute_lady_1.png');
   aspect-ratio: 114 / 300;
 }
 
 .flute_lady_2 {
-  background-image: url('./images/flute_lady_2.png');
+  background-image: url('../mcimages/flute_lady_2.png');
   aspect-ratio: 150 / 373;
 }
 
 
 .mask1 {
-  -webkit-mask-image: url(./images/mask1.png);
-  mask-image: url(./images/mask1.png);
+  -webkit-mask-image: url(../mcimages/mask1.png);
+  mask-image: url(../mcimages/mask1.png);
 }
 
 .mask2 {
-  -webkit-mask-image: url(../images/.mask2.png);
-  mask-image: url(../images/mask2.png);
+  -webkit-mask-image: url(../mcimages/.mask2.png);
+  mask-image: url(../mcimages/mask2.png);
 }
 
 .mask3 {
-  -webkit-mask-image: url(./images/mask3.png);
-  mask-image: url(./images/mask3.png);
+  -webkit-mask-image: url(../mcimages/mask3.png);
+  mask-image: url(../mcimages/mask3.png);
 }
 
 .mask4 {
-  -webkit-mask-image: url(../images/mask4.png);
-  mask-image: url(../images/mask4.png);
+  -webkit-mask-image: url(../mcimages/mask4.png);
+  mask-image: url(../mcimages/mask4.png);
 }
 
 .mask5 {
-  -webkit-mask-image: url(./images/mask5.png);
-  mask-image: url(./images/mask5.png);
+  -webkit-mask-image: url(../mcimages/mask5.png);
+  mask-image: url(../mcimages/mask5.png);
 }
 
 .mask6 {
-  -webkit-mask-image: url(../images/mask6.png);
-  mask-image: url(../images/mask6.png);
+  -webkit-mask-image: url(../mcimages/mask6.png);
+  mask-image: url(../mcimages/mask6.png);
 }
 
 .mask7 {
-  -webkit-mask-image: url(./images/mask7.png);
-  mask-image: url(./images/mask7.png);
+  -webkit-mask-image: url(../mcimages/mask7.png);
+  mask-image: url(../mcimages/mask7.png);
 }
 
 .mask7a {
-  -webkit-mask-image: url(../images/mask7a.png);
-  mask-image: url(../images/.mask7a.png);
+  -webkit-mask-image: url(../mcimages/mask7a.png);
+  mask-image: url(../mcimages/.mask7a.png);
 }
 .mask8 {
-  -webkit-mask-image: url(./images/mask8.png);
-  mask-image: url(./images/mask8.png);
+  -webkit-mask-image: url(../mcimages/mask8.png);
+  mask-image: url(../mcimages/mask8.png);
 }
 
 .mcmask {
@@ -1471,98 +1471,98 @@ These work with either a width or height definition to render the image.
 Can be combined with mask images
 */
 .img_duo_photo {
-  background-image: url('./images/duo_photo.jpg');
+  background-image: url('../mcimages/duo_photo.jpg');
   aspect-ratio: 400/543;
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
 }
 .img_red_cedar_house_1 {
-  background-image: url('./images/red-cedar-house-concert-1.jpg');
+  background-image: url('../mcimages/red-cedar-house-concert-1.jpg');
   aspect-ratio: 600/406;
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
 }
 .img_red_cedar_house_2 {
-  background-image: url('./images/red-cedar-house-concert-2.jpg');
+  background-image: url('../mcimages/red-cedar-house-concert-2.jpg');
   aspect-ratio: 600/398;
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
 }
 .img_red_cedar_outside {
-  background-image: url('./images/red-cedar-outside.jpg');
+  background-image: url('../mcimages/red-cedar-outside.jpg');
   aspect-ratio: 600/392;
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
 }
 .img_mark_vig_4 {
-  background-image: url('./images/mark-vig-4.jpg');
+  background-image: url('../mcimages/mark-vig-4.jpg');
   aspect-ratio: 450/315;
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
 }
 .img_mark_with_guitar_goofy {
-  background-image: url('./images/mark-with-guitar-goofy.jpg');
+  background-image: url('../mcimages/mark-with-guitar-goofy.jpg');
   aspect-ratio: 400/600;
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
 }
 .img_mark_stool {
-  background-image: url('./images/mark-stool.jpg');
+  background-image: url('../mcimages/mark-stool.jpg');
   aspect-ratio: 350/525;
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
 }
 .img_mark_crossed_leg_standing {
-  background-image: url('./images/mark-crossed-leg-standing.jpg');
+  background-image: url('../mcimages/mark-crossed-leg-standing.jpg');
   aspect-ratio: 400/600;
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
 }
 .img_sue_house_of_blues {
-  background-image: url('./images/IMG_0806.JPG');
+  background-image: url('../mcimages/IMG_0806.JPG');
   aspect-ratio: 960/960;
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
 }
 .img_mark_house_of_blues {
-  background-image: url('./images/IMG_0807.JPG');
+  background-image: url('../mcimages/IMG_0807.JPG');
   aspect-ratio: 960/686;
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
 }
 .img_duo_hug_ecc_1 {
-  background-image: url('./images/duo-hug-ecc-1.jpg');
+  background-image: url('../mcimages/duo-hug-ecc-1.jpg');
   aspect-ratio: 400/533;
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
 }
 .img_sue_vig_1 {
-  background-image: url('./images/sue-vig-1.jpg');
+  background-image: url('../mcimages/sue-vig-1.jpg');
   aspect-ratio: 350/525;
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
 }
 .img_sue_with_flute {
-  background-image: url('./images/sue_with_flute.jpg');
+  background-image: url('../mcimages/sue_with_flute.jpg');
   aspect-ratio: 300/450;
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
 }
 .img_duo_sketch_raisin_black {
-  background-image: url('./images/duo_sketch_raisin_black.png');
+  background-image: url('../mcimages/duo_sketch_raisin_black.png');
   aspect-ratio: 450/520;
   background-size: contain;
   background-repeat: no-repeat;
