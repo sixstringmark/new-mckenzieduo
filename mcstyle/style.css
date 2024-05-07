@@ -991,6 +991,7 @@ body {
 }
 .mc-bumper {
   grid-area: mc_bumper;
+  padding-top: 1em;
 }
 
 
@@ -1285,6 +1286,67 @@ body {
   background-image: url('../mcimages/guitar-player-1-cool-white.png');
 }
 
+.eighth_notes_cool_white {
+  background-image: url('../mcimages/eighth-notes-cool-white.png');
+}
+.eighth_notes_columbia_blue {
+  background-image: url('../mcimages/eighth-notes-columbia-blue.png');
+}
+.eighth_notes_powder_blue {
+  background-image: url('../mcimages/eighth-notes-powder-blue.png');
+}
+.eighth_notes_cool_gray {
+  background-image: url('../mcimages/eighth-notes-cool-gray.png');
+}
+.eighth_notes_dim_gray {
+  background-image: url('../mcimages/eighth-notes-dim-gray.png');
+}
+.eighth_notes_cool_raisin_black {
+  background-image: url('../mcimages/eighth-notes-raisin-black.png');
+}
+
+.notes_cool_white {
+  background-image: url('../mcimages/notes-cool-white.png');
+}
+.notes_columbia_blue {
+  background-image: url('../mcimages/notes-columbia-blue.png');
+}
+.notes_powder_blue {
+  background-image: url('../mcimages/notes-powder-blue.png');
+}
+.notes_cool_gray {
+  background-image: url('../mcimages/notes-cool-gray.png');
+}
+.notes_dim_gray {
+  background-image: url('../mcimages/notes-dim-gray.png');
+}
+.notes_cool_raisin_black {
+  background-image: url('../mcimages/notes-raisin-black.png');
+}
+
+.staff_cool_white {
+  background-image: url('../mcimages/staff-cool-white.png');
+}
+.staff_columbia_blue {
+  background-image: url('../mcimages/staff-columbia-blue.png');
+}
+.staff_powder_blue {
+  background-image: url('../mcimages/staff-powder-blue.png');
+}
+.staff_cool_gray {
+  background-image: url('../mcimages/staff-cool-gray.png');
+}
+.staff_dim_gray {
+  background-image: url('../mcimages/staff-dim-gray.png');
+}
+.staff_cool_raisin_black {
+  background-image: url('../mcimages/staff-raisin-black.png');
+}
+
+
+.img_flipped {
+  transform: rotate(180deg);
+}
 
 
 
@@ -1836,21 +1898,21 @@ Can be combined with mask images
   background-repeat: no-repeat;
   display: inline-block;
 }
-.img_duo_formal {
+.ximg_duo_formal {
   background-image: url('../mcimages/duo-formal-posed.jpg');
   aspect-ratio: 400/600;
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
 }
-.img_duo_formal {
+.xximg_duo_formal {
   background-image: url('../mcimages/duo-formal-posed.jpg');
   aspect-ratio: 400/600;
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
 }
-.img_duo_formal {
+.xxximg_duo_formal {
   background-image: url('../mcimages/duo-formal-posed.jpg');
   aspect-ratio: 400/600;
   background-size: contain;
