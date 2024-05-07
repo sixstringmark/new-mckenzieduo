@@ -983,12 +983,16 @@ body {
   grid-area: mc_sidebar;
   text-align: center;  
 }
+.mc-sidebar > h3 {
+  display: none;
+}
 .mc-primary {
   grid-area: mc_primary;
 }
-.mc_bumper {
+.mc-bumper {
   grid-area: mc_bumper;
 }
+
 
 
 /* tablet breakpoint */
@@ -1004,11 +1008,18 @@ body {
 
   #container {
     display: grid;
-    grid-template-rows: auto;
+    grid-template-rows: 1fr auto;
     grid-template-columns: 1fr 2fr;
     grid-template-areas:
-    'mc_sidebar mc_primary' 'mc_sidebar mc_bummper';
+    'mc_sidebar mc_primary' 'mc_sidebar mc_bumper';
   
+  }
+  
+  .mc-sidebar > h3 {
+    display: block;
+  }
+  .mc_bumper > h3 {
+    display: none;
   }
   
 
@@ -1028,13 +1039,20 @@ body {
 
   #container {
     display: grid;
-    grid-template-rows: auto;
+    grid-template-rows: 1fr auto;
     grid-template-columns: 1fr 2fr;
     grid-template-areas:
-    'mc_sidebar mc_primary' 'mc_sidebar mc_bummper';
-  
+    'mc_sidebar mc_primary' 'mc_sidebar mc_bumper';
   }
   
+  .mc-sidebar > h3 {
+    display: block;
+  }
+  .mc-bumper > h3 {
+    display: none;
+  }
+  
+
 
   .page-nav {
     display: block;
@@ -1354,6 +1372,10 @@ body {
   -webkit-mask-image: url(../mcimages/mask8.png);
   mask-image: url(../mcimages/mask8.png);
 }
+.mask9 {
+  -webkit-mask-image: url(../mcimages/mask9.png);
+  mask-image: url(../mcimages/mask9.png);
+}
 
 .mcmask {
   -webkit-mask-repeat: no-repeat;
@@ -1389,10 +1411,52 @@ body {
   width: 200px;
   height: auto;
 }
+.width_10_pct {
+  width: 10%;
+  height: auto;
+}
+.width_20_pct {
+  width: 20%;
+  height: auto;
+}
+.width_30_pct {
+  width: 30%;
+  height: auto;
+}
+.width_40_pct {
+  width: 40%;
+  height: auto;
+}
+.width_50_pct {
+  width: 50%;
+  height: auto;
+}
+.width_60_pct {
+  width: 60%;
+  height: auto;
+}
+.width_70_pct {
+  width: 70%;
+  height: auto;
+}
 .width_80_pct {
   width: 80%;
   height: auto;
 }
+.width_80_pct_max_300 {
+  width: 80%;
+  height: auto;
+  max-width: 300px;
+}
+.width_90_pct {
+  width: 90%;
+  height: auto;
+}
+.width_100_pct {
+  width: 100%;
+  height: auto;
+}
+
 
 .mcmask>img {
   width: 100%;
@@ -1477,6 +1541,15 @@ Can be combined with mask images
   background-repeat: no-repeat;
   display: inline-block;
 }
+.img_duo_standing_ecc {
+  background-image: url('../mcimages/duo-standing-wall-ecc-1.jpg');
+  aspect-ratio: 400/600;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+
 .img_red_cedar_house_1 {
   background-image: url('../mcimages/red-cedar-house-concert-1.jpg');
   aspect-ratio: 600/406;
@@ -1526,6 +1599,35 @@ Can be combined with mask images
   background-repeat: no-repeat;
   display: inline-block;
 }
+.img_mark_epiphone {
+  background-image: url('../mcimages/mark_epiphone.jpg');
+  aspect-ratio: 300/450;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_mark_with_les_paul {
+  background-image: url('../mcimages/mark_with_les_paul.jpg');
+  aspect-ratio: 400/364;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_mark_tux {
+  background-image: url('../mcimages/mark-tux-higher-res.jpg');
+  aspect-ratio: 400/527;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.img_sue_bass {
+  background-image: url('../mcimages/sue_bass.jpg');
+  aspect-ratio: 300/450;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
 .img_sue_house_of_blues {
   background-image: url('../mcimages/IMG_0806.JPG');
   aspect-ratio: 960/960;
@@ -1568,7 +1670,193 @@ Can be combined with mask images
   background-repeat: no-repeat;
   display: inline-block;
 }
+.img_duo_sketch_raisin_black {
+  background-image: url('../mcimages/duo_sketch_raisin_black.png');
+  aspect-ratio: 450/520;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_duo_sketch_dim_gray {
+  background-image: url('../mcimages/duo_sketch_dim_gray.png');
+  aspect-ratio: 450/520;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_duo_sketch_dim_gray_2 {
+  background-image: url('../mcimages/duo_sketch_dim_gray_2.png');
+  aspect-ratio: 450/520;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_duo_sketch_powder_blue {
+  background-image: url('../mcimages/duo_sketch_powder_blue.png');
+  aspect-ratio: 450/520;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_duo_sketch_cool_gray {
+  background-image: url('../mcimages/duo_sketch_cool_gray.png');
+  aspect-ratio: 450/520;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_duo_sketch_cool_white {
+  background-image: url('../mcimages/duo_sketch_cool_white.png');
+  aspect-ratio: 450/520;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_duo_sketch_columbia_blue {
+  background-image: url('../mcimages/duo_sketch_columbia_blue.png');
+  aspect-ratio: 450/520;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_duo_sketch_columbia_blue_2 {
+  background-image: url('../mcimages/duo_sketch_columbia_blue_2.png');
+  aspect-ratio: 450/520;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
 
+.img_guitar_neck_hands_neon_glow { /* 600x69 */
+  background-image: url('../mcimages/guitar-neck-hands-neon-glow.jpg');
+  aspect-ratio: 600/69;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_guitar_neck_hands_grey { /* 600x69 */
+  background-image: url('../mcimages/guitar-neck-hands-grey.jpg');
+  aspect-ratio: 600/69;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_guitar_neck_hands { /* 600x69 */
+  background-image: url('../mcimages/guitar-neck-hands.jpg');
+  aspect-ratio: 600/69;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.img_guitar_neck_fingers_conte_crayon { /* 600x152 */
+  background-image: url('../mcimages/guitar-neck-fingers-conte-crayon.jpg');
+  aspect-ratio: 600/152;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_guitar_neck_fingers_edge_glow { /* 600x152 */
+  background-image: url('../mcimages/guitar-neck-fingers-edge-glow.jpg');
+  aspect-ratio: 600/152;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_guitar_neck_fingers { /* 600x152 */
+  background-image: url('../mcimages/guitar-neck-fingers.jpg');
+  aspect-ratio: 600/152;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.img_flute_lips_hands {
+  background-image: url('../mcimages/flute-lips-hands-2.jpg');
+  aspect-ratio: 600/75;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_flute_lips_hands_charcoal {
+  background-image: url('../mcimages/flute-lips-hands-2-charcoal.jpg');
+  aspect-ratio: 600/75;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_flute_lips_hands_conte_crayon_inverse { 
+  background-image: url('../mcimages/flute-lips-hands-2-conte-crayon-inverse.jpg');
+  aspect-ratio: 600/75;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_flute_lips_hands_neon_glow { 
+  background-image: url('../mcimages/flute-lips-hands-2-neon-glow.jpg');
+  aspect-ratio: 600/75;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.img_flute_fingers { 
+  background-image: url('../mcimages/flute_fingers_1.jpg');
+  aspect-ratio: 400/141;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_flute_fingers_glowing_edges { 
+  background-image: url('../mcimages/flute_fingers_1_glowing_edges.jpg');
+  aspect-ratio: 400/141;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_flute_fingers_note_paper { 
+  background-image: url('../mcimages/flute_fingers_1_note_paper.jpg');
+  aspect-ratio: 400/141;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_flute_fingers_photocopy { 
+  background-image: url('../mcimages/flute_fingers_1_photocopy.jpg');
+  aspect-ratio: 400/141;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.img_duo_formal {
+  background-image: url('../mcimages/duo-formal-posed.jpg');
+  aspect-ratio: 400/600;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_duo_formal {
+  background-image: url('../mcimages/duo-formal-posed.jpg');
+  aspect-ratio: 400/600;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_duo_formal {
+  background-image: url('../mcimages/duo-formal-posed.jpg');
+  aspect-ratio: 400/600;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_duo_formal {
+  background-image: url('../mcimages/duo-formal-posed.jpg');
+  aspect-ratio: 400/600;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
 
 
 /*
