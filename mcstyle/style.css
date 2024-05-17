@@ -1100,6 +1100,11 @@ body {
   height: 40px;
 }
 
+.xtiny_frog,
+.xtiny_square {
+  height: 28px;
+}
+
 .tiny_square>img,
 .small_square>img,
 .medium_square>img,
