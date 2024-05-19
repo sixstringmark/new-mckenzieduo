@@ -992,6 +992,7 @@ body {
 .mc-bumper {
   grid-area: mc_bumper;
   padding-top: 1em;
+  text-align: center;
 }
 
 
@@ -1013,14 +1014,16 @@ body {
     grid-template-columns: 1fr 2fr;
     grid-template-areas:
     'mc_sidebar mc_primary' 'mc_sidebar mc_bumper';
-  
   }
   
   .mc-sidebar > h3 {
     display: block;
   }
-  .mc_bumper > h3 {
+  .mc-bumper > h3 {
     display: none;
+  }
+  .mc-bumper {
+    text-align: left;
   }
   
 
@@ -1051,6 +1054,9 @@ body {
   }
   .mc-bumper > h3 {
     display: none;
+  }
+  .mc-bumper {
+    text-align: left;
   }
   
 
@@ -1595,6 +1601,8 @@ body {
     grid-column: 2;
     margin-block-end: auto;
   }
+
+
 }
 
 /* 
@@ -1615,6 +1623,21 @@ Can be combined with mask images
   background-repeat: no-repeat;
   display: inline-block;
 }
+.img_duo_wide_2 {
+  background-image: url('../mcimages/duo_wide_2.jpg');
+  aspect-ratio: 600/118;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_duo_wide {
+  background-image: url('../mcimages/duo_wide.jpg');
+  aspect-ratio: 600/132;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
 
 
 .img_red_cedar_house_1 {
