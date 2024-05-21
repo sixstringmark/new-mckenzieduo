@@ -1623,6 +1623,104 @@ Can be combined with mask images
   background-repeat: no-repeat;
   display: inline-block;
 }
+
+.img_duo_wide_4 {
+  background-image: url('../mcimages/duo_wide_4.jpg');
+  aspect-ratio: 600/97;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_duo_wide_4a {
+  background-image: url('../mcimages/duo_wide_4a.jpg');
+  aspect-ratio: 600/97;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_duo_wide_4b {
+  background-image: url('../mcimages/duo_wide_4b.jpg');
+  aspect-ratio: 600/97;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_duo_wide_4c {
+  background-image: url('../mcimages/duo_wide_4c.jpg');
+  aspect-ratio: 600/97;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_duo_wide_4d {
+  background-image: url('../mcimages/duo_wide_4d.jpg');
+  aspect-ratio: 600/97;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+/* 5a 122 6a 105 */
+.img_duo_wide_5a {
+  background-image: url('../mcimages/duo_wide_5a.jpg');
+  aspect-ratio: 600/122;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_duo_wide_6a {
+  background-image: url('../mcimages/duo_wide_6a.jpg');
+  aspect-ratio: 600/105;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.img_duo_wide_7 {
+  background-image: url('../mcimages/duo_wide_7.jpg');
+  aspect-ratio: 600/80;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_duo_wide_7a {
+  background-image: url('../mcimages/duo_wide_7a.jpg');
+  aspect-ratio: 600/80;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_duo_wide_7b {
+  background-image: url('../mcimages/duo_wide_7b.jpg');
+  aspect-ratio: 600/80;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_duo_wide_7c {
+  background-image: url('../mcimages/duo_wide_7c.jpg');
+  aspect-ratio: 600/80;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+
+
+
+.img_duo_wide_3a {
+  background-image: url('../mcimages/duo_wide_3a.jpg');
+  aspect-ratio: 600/114;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img_duo_wide_3 {
+  background-image: url('../mcimages/duo_wide_3.jpg');
+  aspect-ratio: 600/114;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
 .img_duo_wide_2 {
   background-image: url('../mcimages/duo_wide_2.jpg');
   aspect-ratio: 600/118;
