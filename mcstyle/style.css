@@ -1469,6 +1469,9 @@ body {
 .height_tiny {
   height: 40px;
 }
+.height_medium {
+  height: 90px;
+}
 .height_large {
   height: 300px;
 }
